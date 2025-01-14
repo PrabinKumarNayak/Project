@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100vw;
+    background-color: #C5BDB4;
+}
+
+#nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+}
+
+#nav img {
+    height: 30px;
+    width: 40%;
+}
+
+#nav h5 {
+    font-size: 20px;
+    font-weight: 100;
+    width: 10%;
+}
+#nav i{
+   width: 10%;
+}
