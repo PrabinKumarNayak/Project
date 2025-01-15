@@ -39,3 +39,53 @@ body {
 #nav i{
    width: 10%;
 }
+#elems{
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+#elem1{
+    width: 30%;
+    height: 100%;
+    background-color: blue;
+    
+}
+#elem2{
+    width: 25%;
+    height: 100%;
+    
+    border-right: 2px solid #706C66;
+    border-left: 2px solid #706C66;
+    padding: 20px 60px;
+    text-align: center;
+}
+#elem3{
+    width: 30%;
+    height: 100%;
+    background-color: blue;
+}
+#elem1 #image-div{
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+}
+#image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+}
+#elem3 #image-div{
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+}
+#image-div:hover img{
+    scale: 1.1;
+}
+#elem1 h4{
+    font-size: 20px;
+    margin-top: 20px;
+}
