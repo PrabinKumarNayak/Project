@@ -18,6 +18,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #C5BDB4;
+    overflow-x: hidden;
 }
 
 #nav {
@@ -32,7 +33,7 @@ body {
 
 #nav img {
     height: 30px;
-    width: 40%;
+    width: 35%;
 }
 
 #nav h5 {
@@ -41,10 +42,10 @@ body {
     width: 10%;
 }
 #nav i{
-   width: 10%;
+   width: 5%;
 }
 #elems{
-    height: 420px;
+    height: 360px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -57,7 +58,7 @@ body {
     
 }
 #elem2{
-    width: 25%;
+    width: 30%;
     height: 100%;
     
     border-right: 2px solid #706C66;
@@ -109,4 +110,55 @@ body {
     font-weight: 100;
     color: #454545;
     font-family: domain;
+}
+#elem3 h4{
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: canopee;
+}
+#elem3 h4 span{
+    background-color: #B73C12;
+    color: #C5BDB4;
+    font-weight: 100;
+    font-size: 18px;
+    padding: 4px ;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+#elem3 p{
+    font-size: 21px;
+    font-weight: 100;
+    color: #454545;
+    font-family: domain;
+}
+#elem2 h2{
+    font-family: canopee;
+    font-size: 60px;
+    font-weight: 100;
+}
+#elem2 h3{
+    font-family: domain;
+    font-size: 35px;
+    color: #2f2f2f;
+    font-weight: 100;
+    margin: 20px 0;
+}
+#elem2 h6{
+    font-family: domain;
+    font-size: 20px;
+    color: #2f2f2f;
+    font-weight: 100;
+}
+#page1 h1{
+    text-align: center;
+    font-size: 500px;
+    letter-spacing: -10px;
+    font-weight: 100;
+    font-family: canopee;
+    background-color: #1c1c19;
+    color: #C5BDB4;
+    line-height: 420px;
+    width: 96%;
+    margin-left: 2%;
 }
