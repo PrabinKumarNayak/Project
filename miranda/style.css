@@ -18,10 +18,11 @@ body {
     overflow-x: hidden;
 }
 #page1 {
-    height: 100vh;
+    height: 110vh;
     width: 100vw;
     background-color: #C5BDB4;
-    overflow-x: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 #nav {
@@ -164,4 +165,30 @@ body {
     line-height: 420px;
     width: 96%;
     margin-left: 2%;
+}
+#page2{
+    height: 150vh;
+    width: 100%;
+    background-color: #C5BDB4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10px;
+}
+#page2-left{
+    height: 100%;
+    width: 25%;
+}
+#page2-left h2{
+    font-size: 100px;
+    font-family: canopee;
+    line-height: 130px;
+    font-weight: 100;
+}
+#page2-left h2 span{
+    font-size: 160px;
+    font-weight: 800;
+}
+#page2-right{
+    height: 100%;
 }
