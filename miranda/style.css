@@ -248,10 +248,11 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #C5BDB4;
 }
 #page4-left{
-    width: 60%;
+    width: 65%;
     height: 100%;
     padding: 80px 60px ;
 
@@ -262,9 +263,25 @@ body {
     object-fit: cover;
 }
 #page4-right{
-    width: 40%;
+    width: 35%;
     height: 100%;
 
-    padding: 80px;
+    padding: 80px 60px;
 
+}
+#page4-right p{
+    font-size: 30px;
+    font-family: domain;
+    font-weight: 100;
+    color: #2f2f2f;
+    margin-bottom: 40px;
+    line-height: 32px;
+
+}
+#page4-right #anda{
+    height: 150px;
+    background-color: #CAC1B6;
+    border: 1px solid #2f2f2fc6;
+    border-radius: 50%;
+    width: 100%;
 }
