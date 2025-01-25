@@ -220,3 +220,51 @@ body {
     letter-spacing: -1px;
     font-weight: 100;
 }
+#page3{
+    height: 60vh;
+    background-color: #C5BDB4;
+    position: relative;
+}
+#page3 h1{
+    font-size: 400px;
+    font-weight: 100;
+    letter-spacing: -5px;
+    font-family: canopee;
+    color: #C5BDB4;
+    background-color: #1c1c19;
+    width: fit-content;
+    margin-left: 30px;
+    padding: 0 20px;
+    line-height: 400px;
+}
+#page3 img{
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: 3%;
+}
+#page4{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #C5BDB4;
+}
+#page4-left{
+    width: 60%;
+    height: 100%;
+    padding: 80px 60px ;
+
+}
+#page4-left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page4-right{
+    width: 40%;
+    height: 100%;
+
+    padding: 80px;
+
+}
