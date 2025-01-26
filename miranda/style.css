@@ -284,4 +284,19 @@ body {
     border: 1px solid #2f2f2fc6;
     border-radius: 50%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+#anda h1{
+    font-size: 60px;
+    font-family: canopee;
+    font-weight: 100;
+
+}
+#anda img{
+    height: 60px;
+
 }
