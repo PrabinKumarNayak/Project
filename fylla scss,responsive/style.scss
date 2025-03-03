@@ -23,16 +23,34 @@ main{
 }
 .view-1{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     p{
-        font-weight: 200;
+        font-weight: 500;
         opacity: 0.8;
     }
     h1{
-        font-size: 3rem;
-        font-weight: 200;
+        font-size: 3.8rem;
+        font-weight: 400;
+        width: 70%;
     }
     img{
         width: 100%;
-
+        object-fit:cover ;
+        border-radius: 1rem;
+    }
+}
+.view-2{
+    margin: 2rem 0;
+    
+}
+@media (min-width:1020px){
+    main{
+        padding: 2rem;
+    }
+    .view-1 h1{
+        font-size: 5rem;
+        width: 100%;
     }
 }
