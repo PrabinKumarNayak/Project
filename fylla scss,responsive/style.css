@@ -19,7 +19,7 @@ body {
 }
 
 main {
-  padding: 1rem;
+  padding: 1.5rem;
   padding-top: 3rem;
   width: 100%;
   border: 1px solid black;
@@ -32,7 +32,7 @@ main {
   gap: 1.5rem;
 }
 .view-1 p {
-  font-weight: 500;
+  font-weight: 200;
   opacity: 0.8;
 }
 .view-1 h1 {
@@ -49,6 +49,29 @@ main {
 
 .view-2 {
   margin: 2rem 0;
+  gap: 1.5rem;
+  width: 100%;
+}
+.view-2 .top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.view-2 .top p {
+  font-weight: 200;
+  opacity: 0.8;
+}
+.view-2 .top h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  width: 90%;
+}
+.view-2 .top button {
+  padding: 1rem;
+  border: 0.7rem;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 0.5rem;
 }
 
 @media (min-width: 1020px) {
