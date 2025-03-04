@@ -46,6 +46,8 @@ main{
     }
 }
 .view-2{
+    display: flex;
+    flex-direction: column;
     margin: 2rem 0;
     gap: 1.5rem;
     width: 100%;
@@ -67,6 +69,25 @@ main{
             background-color: black;
             color: aliceblue;
             border-radius: 0.5rem;
+        }
+   }
+   .line{
+        background-color: #000;
+        height: 1px;
+   }
+   .bottom{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .elem{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            svg{
+                width: 2rem;
+                aspect-ratio: 1/1;
+                
+            }
         }
    }
 }

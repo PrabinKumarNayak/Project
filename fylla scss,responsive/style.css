@@ -48,6 +48,8 @@ main {
 }
 
 .view-2 {
+  display: flex;
+  flex-direction: column;
   margin: 2rem 0;
   gap: 1.5rem;
   width: 100%;
@@ -72,6 +74,24 @@ main {
   background-color: black;
   color: aliceblue;
   border-radius: 0.5rem;
+}
+.view-2 .line {
+  background-color: #000;
+  height: 1px;
+}
+.view-2 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.view-2 .bottom .elem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.view-2 .bottom .elem svg {
+  width: 2rem;
+  aspect-ratio: 1/1;
 }
 
 @media (min-width: 1020px) {
