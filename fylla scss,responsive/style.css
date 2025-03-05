@@ -114,14 +114,17 @@ main {
     flex-direction: row;
   }
   .view-2 .top {
-    flex-basis: 0.7;
+    flex-basis: 60%;
+  }
+  .view-2 .top h1 {
+    font-size: 5rem;
   }
   .view-2 .line {
     height: initial;
     width: 1px;
   }
   .view-2 .bottom {
-    flex-basis: 0.3;
+    flex-basis: 40%;
   }
   .view-2 .bottom .line {
     height: 1px;

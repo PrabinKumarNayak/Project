@@ -109,14 +109,18 @@ main{
     .view-2{
         flex-direction: row;
         .top{
-            flex-basis: 0.7;
+            flex-basis: 60%;
+            h1{
+                font-size: 5rem;
+            }
         }
         .line{
             height: initial;
-            width: 1px;
+            width:1px;
         }
+        
         .bottom{
-            flex-basis: 0.3;
+            flex-basis: 40%;
             .line{
                 height: 1px;
                 width: 100%;
