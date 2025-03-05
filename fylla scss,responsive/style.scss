@@ -1,6 +1,6 @@
 @mixin light-weight-font{
-    font-weight: 200;
-    opacity: 0.8;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 *{
@@ -85,9 +85,16 @@ main{
             gap: 0.5rem;
             svg{
                 width: 2rem;
-                aspect-ratio: 1/1;
-                
+                aspect-ratio: 1/1;    
             }
+            h1{
+                font-size: 2.5rem;
+                font-weight: 400;
+            }
+            p{
+                @include light-weight-font;
+            }
+            
         }
    }
 }
@@ -98,5 +105,23 @@ main{
     .view-1 h1{
         font-size: 5rem;
         width: 100%;
+    }
+    .view-2{
+        flex-direction: row;
+        .top{
+            flex-basis: 0.7;
+        }
+        .line{
+            height: initial;
+            width: 1px;
+        }
+        .bottom{
+            flex-basis: 0.3;
+            .line{
+                height: 1px;
+                width: 100%;
+                align-self: stretch;
+            }
+        }
     }
 }
