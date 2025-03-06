@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  padding: 1rem;
+}
+
+.view-1 .top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-1 .top h1 {
+  font-size: 3rem;
+}
+.view-1 .top h1 span {
+  opacity: 0.6;
+}
+.view-1 .top .bottom {
+  display: grid;
+  grid-template-areas: "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c" "a a c c";
+}
+.view-1 .top .bottom .img-a {
+  grid-area: a;
+}
+.view-1 .top .bottom .img-b {
+  grid-area: b;
+}
+.view-1 .top .bottom .img-c {
+  grid-area: c;
+}/*# sourceMappingURL=Style.css.map */
