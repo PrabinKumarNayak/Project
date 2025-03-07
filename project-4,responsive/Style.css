@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -17,6 +18,13 @@ main {
   padding: 1rem;
 }
 
+.view-1 {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
 .view-1 .top {
   display: flex;
   flex-direction: column;
@@ -28,16 +36,27 @@ main {
 .view-1 .top h1 span {
   opacity: 0.6;
 }
-.view-1 .top .bottom {
+.view-1 .bottom {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.view-1 .bottom .images {
+  width: 100%;
   display: grid;
   grid-template-areas: "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c" "a a c c";
+  gap: 1rem;
 }
-.view-1 .top .bottom .img-a {
+.view-1 .bottom .images img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.view-1 .bottom .images .img-a {
   grid-area: a;
 }
-.view-1 .top .bottom .img-b {
+.view-1 .bottom .images .img-b {
   grid-area: b;
 }
-.view-1 .top .bottom .img-c {
+.view-1 .bottom .images .img-c {
   grid-area: c;
 }/*# sourceMappingURL=Style.css.map */
