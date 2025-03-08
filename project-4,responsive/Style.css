@@ -45,9 +45,11 @@ main {
   display: grid;
   grid-template-areas: "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c" "a a c c";
   gap: 1rem;
+  max-height: 30rem;
 }
 .view-1 .bottom .images img {
-  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
 }
