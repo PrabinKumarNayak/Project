@@ -87,21 +87,12 @@ main {
   .view-1 .bottom {
     width: 50%;
     aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .view-1 .bottom .images {
-    max-width: 40rem;
-    grid-template-areas: ". . b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" ". . c c" ". . c c";
-  }
-  .view-1 .bottom .images .img-a {
-    max-width: min(20rem, 100%);
-    aspect-ratio: 4/6;
-  }
-  .view-1 .bottom .images .img-b {
-    max-width: 15rem;
-    aspect-ratio: 4/9;
-  }
-  .view-1 .bottom .images .img-c {
-    max-width: 15rem;
-    aspect-ratio: 1/1;
+    max-width: 50rem;
+    grid-template-areas: ". . b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c" ". . c c";
   }
 }/*# sourceMappingURL=Style.css.map */
