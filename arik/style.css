@@ -29,8 +29,7 @@ main {
 }
 .view-1 img {
   width: 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .view-1 h1 {
   font-size: 3.5rem;
