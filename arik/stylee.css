@@ -76,3 +76,7 @@ main {
     animation: marquee 10s linear infinite both;
     padding: 0 1.5rem;
 }
+.view-2 .marquee .text p {
+    font-size: 2rem;
+    font-weight: 300;
+  }
