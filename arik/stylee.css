@@ -70,3 +70,9 @@ main {
     top: 0;
     right: 0;
 }
+.view-2 .marquee .text{
+    display: flex;
+    gap: 3rem;
+    animation: marquee 10s linear infinite both;
+    padding: 0 1.5rem;
+}
