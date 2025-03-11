@@ -79,4 +79,12 @@ main {
 .view-2 .marquee .text p {
     font-size: 2rem;
     font-weight: 300;
+}
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
