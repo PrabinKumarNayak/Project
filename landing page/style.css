@@ -21,3 +21,22 @@ header{
     justify-content: center;
 
 }
+.header-content{
+    color: whitesmoke;
+    text-align: center;
+}
+.header-content h2{
+    font-size: 1.8rem;
+}
+.line{
+    width: 17rem;
+    height: 0.23rem;
+    background-color: #fc036f;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-content h1{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
