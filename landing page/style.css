@@ -40,3 +40,29 @@ header{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.ctn{
+    padding: 10px 17px;
+    background: #fc036f;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+ul{
+    list-style: none;
+}
+.active{
+    color: #fc036f;
+    text-decoration: underline;
+    font-weight: bold;
+}
+/* Navbar */
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+}
