@@ -66,6 +66,23 @@ ul{
     padding: 20px;
     color: whitesmoke;
 }
+.navbar .nav-links{
+    display: flex;
+    gap: 5rem;
+
+}
+.nav-links li a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.menu-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
 /* Mobile Device */
 
 @media (max-width: 850px){
