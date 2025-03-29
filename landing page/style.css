@@ -83,6 +83,22 @@ ul{
     cursor: pointer;
     display: none;
 }
+/* Events */
+section{
+    width: 80%;
+    margin: 3rem auto;
+}
+.title{
+    text-align: center;
+    font-size: 1.1rem;
+    color: #494973;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
 /* Mobile Device */
 
 @media (max-width: 850px){
