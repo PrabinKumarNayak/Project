@@ -19,5 +19,24 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1rem;
- 
+    .hero-text{
+        width: 100%;
+        object-fit: cover;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        .text{
+            display: flex;
+            justify-content: space-between;
+            font-family: monospace;
+            p{
+                text-transform: uppercase;
+            }
+        }
+    }
+
 }
