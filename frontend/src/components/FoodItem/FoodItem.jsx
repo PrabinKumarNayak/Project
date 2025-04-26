@@ -1,5 +1,5 @@
-export default function FoodItem(){
+export default function FoodItem({ id, name, price, description, image }){
     return(
-        <FoodItem/>
+        <div className="food-item"></div>
     )
 }

@@ -8,7 +8,7 @@ const StoreContextProvider = (props)=>{
         food_list
     }
     return(
-        <StoreContext.Provider>
+        <StoreContext.Provider value={contextValue}>
             {props.children}
         </StoreContext.Provider>
     )
