@@ -24,6 +24,5 @@ export default function FoodDisplay({ category }) {
           })}
         </div>
       </div>
-    </>
-  );
+    </>  );
 }
