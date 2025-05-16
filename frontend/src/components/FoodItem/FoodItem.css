@@ -36,21 +36,21 @@
   font-weight: 500;
   margin: 10px 0px;
 }
-.food-item-image-container{
+.food-item-img-container {
   position: relative;
 }
-.food-item-image-container .add{
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  border-radius: 50%;
+.food-item-img-container .add {
   width: 35px;
-  cursor: pointer;
-}
-.food-item-counter{
   position: absolute;
-  right: 15px;
   bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.food-item-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   display: flex;
   align-items: center;
   gap: 10px;
