@@ -13,6 +13,7 @@ export default function Navbar(){
                  <li onClick={()=>setMenu("blog")} className={menu==="blog"?"active":""} >Blog</li>
                  <li onClick={()=>setMenu("about")} className={menu==="about"?"active":""} >About</li>
                  <li onClick={()=>setMenu("contact")} className={menu==="contact"?"active":""} >Contact</li>
+                 <li id="lg-bag" onClick={()=>setMenu("cart")} className={menu==="cart"?"active":""}><i class="fa-solid fa-bag-shopping"></i></li>
             </ul>
         </div>
     </div>
