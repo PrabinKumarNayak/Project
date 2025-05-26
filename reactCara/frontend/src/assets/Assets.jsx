@@ -16,6 +16,15 @@ import p6 from "./products/f6.jpg";
 import p7 from "./products/f7.jpg";
 import p8 from "./products/f8.jpg";
 
+import n1 from "./products/n1.jpg";
+import n2 from "./products/n2.jpg";
+import n3 from "./products/n3.jpg";
+import n4 from "./products/n4.jpg";
+import n5 from "./products/n5.jpg";
+import n6 from "./products/n6.jpg";
+import n7 from "./products/n7.jpg";
+import n8 from "./products/n8.jpg";
+
 export const assets = {
   logo,
   f1,
@@ -32,6 +41,14 @@ export const assets = {
   p6,
   p7,
   p8,
+  n1,
+  n2,
+  n3,
+  n4,
+  n5,
+  n6,
+  n7,
+  n8,
 };
 
 export const feature_list = [
@@ -99,5 +116,64 @@ export const featured_products = [
     name: "Cosmic Dust T-Shirt",
     image: p8,
     price: 72,
+  },
+];
+
+export const new_arrivals = [
+  {
+    id: 101,
+    brand: "adidas",
+    name: "Lunar Expedition Tee",
+    image: n1,
+    price: 82,
+  },
+  {
+    id: 102,
+    brand: "nike",
+    name: "Orbit Tracks Shirt",
+    image: n2,
+    price: 75,
+  },
+  {
+    id: 103,
+    brand: "puma",
+    name: "Cosmic Trail Tee",
+    image: n3,
+    price: 88,
+  },
+  {
+    id: 104,
+    brand: "reebok",
+    name: "Nebula Horizon T-Shirt",
+    image: n4,
+    price: 79,
+  },
+  {
+    id: 105,
+    brand: "adidas",
+    name: "Comet Burst Tee",
+    image: n5,
+    price: 84,
+  },
+  {
+    id: 106,
+    brand: "under armour",
+    name: "Solar Flare Shirt",
+    image: n6,
+    price: 89,
+  },
+  {
+    id: 107,
+    brand: "fila",
+    name: "Meteor Dash T-Shirt",
+    image: n7,
+    price: 71,
+  },
+  {
+    id: 108,
+    brand: "asics",
+    name: "Celestial Drift Tee",
+    image: n8,
+    price: 93,
   },
 ];

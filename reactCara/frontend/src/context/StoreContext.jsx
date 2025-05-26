@@ -1,10 +1,11 @@
 import { createContext } from "react";
-import { featured_products } from "../assets/Assets";
+import { featured_products, new_arrivals } from "../assets/Assets";
 
 export const StoreContext = createContext(null);
 const StoreContextProvider = (props) =>{
     const contextValue = {
-       featured_products
+       featured_products,
+       new_arrivals
       };
       return (
         <StoreContext.Provider value={contextValue}>
