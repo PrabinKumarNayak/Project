@@ -25,8 +25,16 @@ import n6 from "./products/n6.jpg";
 import n7 from "./products/n7.jpg";
 import n8 from "./products/n8.jpg";
 
+import app from "./pay/app.jpg";
+import pay from "./pay/pay.png";
+import play from "./pay/play.jpg";
+
+
 export const assets = {
   logo,
+  app,
+  play,
+  pay,
   f1,
   f2,
   f3,
