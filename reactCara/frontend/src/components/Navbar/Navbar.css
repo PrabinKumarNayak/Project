@@ -15,14 +15,16 @@
     align-items: center;
     justify-content: center;
 }
-#navbar li{
-    list-style: none;
+#navbar a{
+    color: #222;
+    text-decoration: none;
+    
     padding: 0 20px;
     position: relative;
     cursor: pointer;
     transition: 0.3s ease;
 }
-#navbar li:hover{
+#navbar a:hover{
     color: #088178;
 }
 
