@@ -1,24 +1,35 @@
 import { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
+import "./SelectItem.css";
 
-export default function Sproduct() {
+export default function SelectItem() {
   const { featured_products } = useContext(StoreContext);
   return (
     <div id="prodetails" class="section-p1">
       <div className="single-pro-image">
-       
         {featured_products.map((item, index) => {
-          return   <img src={item.image} width="100%" id="MainImg" key={index}/>;
+          if (index === 0) {
+            return (
+              <img src={item.image} width="100%" id="MainImg" key={index} />
+            );
+          }
         })}
 
         <div className="small-img-group">
-          <div className="small-img-col">
-            {featured_products.map((item, index) => {
+          {featured_products.map((item, index) => {
+            if (index <= 3) {
               return (
-                <img src={item.image} width="100%" className="small-img" key={index} />
+                <div className="small-img-col">
+                  <img
+                    src={item.image}
+                    width="100%"
+                    className="small-img"
+                    key={index}
+                  />
+                </div>
               );
-            })}
-          </div>
+            }
+          })}
         </div>
       </div>
 

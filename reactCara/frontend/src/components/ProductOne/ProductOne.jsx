@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import "./ProductOne.css"
 
 export default function ProductOne({ id, brand, name, image, price }) {
   return (
        <div className="pro">
-       <img src={image} alt="" />
+       <Link to='/sproduct'><img src={image} alt="" /></Link>
        <div className="des">
          <span>{brand}</span>
          <h5>{name}</h5>

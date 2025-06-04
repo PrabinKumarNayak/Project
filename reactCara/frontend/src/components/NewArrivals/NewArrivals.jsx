@@ -12,6 +12,7 @@ export default function NewArrivals(){
         <div class="pro-container">
         {new_arrivals.map((item, index) => {
                   return (
+                    <>
                     <ProductTwo
                       key={index}
                       id={item.id}
@@ -20,6 +21,8 @@ export default function NewArrivals(){
                       image={item.image}
                       price={item.price}
                     />
+                    </>
+                    
                   );
                 })}
 
