@@ -1,0 +1,13 @@
+#blog-header{
+    width: 100%;
+    height: 40vh;
+    background-image: url(b19.jpg);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+#blog-header h2,
+#blog-header p{
+    color: #fff;
+}

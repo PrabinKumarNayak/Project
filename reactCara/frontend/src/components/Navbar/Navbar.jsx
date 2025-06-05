@@ -11,7 +11,7 @@ export default function Navbar(){
             <div id="navbar">
                  <Link to='/'><a onClick={()=>setMenu("home")} className={menu==="home"?"active":""} >Home</a></Link>
                  <Link to='/shop'><a onClick={()=>setMenu("shop")} className={menu==="shop"?"active":""} >Shop</a></Link>
-                 <a onClick={()=>setMenu("blog")} className={menu==="blog"?"active":""} >Blog</a>
+                 <Link to='/blog'><a onClick={()=>setMenu("blog")} className={menu==="blog"?"active":""} >Blog</a></Link>
                  <a onClick={()=>setMenu("about")} className={menu==="about"?"active":""} >About</a>
                  <a onClick={()=>setMenu("contact")} className={menu==="contact"?"active":""} >Contact</a>
                  <a id="lg-bag" onClick={()=>setMenu("cart")} className={menu==="cart"?"active":""}><i class="fa-solid fa-bag-shopping"></i></a>

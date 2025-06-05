@@ -29,6 +29,15 @@ import app from "./pay/app.jpg";
 import pay from "./pay/pay.png";
 import play from "./pay/play.jpg";
 
+import b1 from "./blog/b1 (1).jpg";
+import b2 from "./blog/b2 (1).jpg";
+import b3 from "./blog/b3.jpg";
+import b4 from "./blog/b4 (1).jpg";
+import b6 from "./blog/b6.jpg";
+
+
+
+
 
 export const assets = {
   logo,
@@ -57,6 +66,11 @@ export const assets = {
   n6,
   n7,
   n8,
+  b1,
+  b2,
+  b3,
+  b4,
+  b6
 };
 
 export const feature_list = [
@@ -183,5 +197,39 @@ export const new_arrivals = [
     name: "Celestial Drift Tee",
     image: n8,
     price: 93,
+  },
+];
+
+
+export const blog_list = [
+  {
+    title: "The Cotton-Jersey Zip-Up Hoodie",
+    description: "Explore the comfort and casual charm of our premium zip-up hoodie, made with breathable cotton jersey for everyday wear.",
+    image: b1,
+    date: "13/01",
+  },
+  {
+    title: "How to Style a Quiff",
+    description: "Learn easy steps to master the quiff hairstyle with modern styling techniques and the right products.",
+    image: b2,
+    date: "15/01",
+  },
+  {
+    title: "Must-Have Skater Girl Items",
+    description: "Discover the essential gear and apparel that define skater girl fashion—bold, comfy, and always stylish.",
+    image: b3,
+    date: "13/04",
+  },
+  {
+    title: "Runway-Inspired Trends",
+    description: "Stay ahead of fashion with top runway trends now available in wearable street styles for the season.",
+    image: b4,
+    date: "12/01",
+  },
+  {
+    title: "AW20 Menswear Trends",
+    description: "A deep dive into AW20’s standout menswear looks—from oversized tailoring to functional outerwear.",
+    image: b6,
+    date: "10/03",
   },
 ];
