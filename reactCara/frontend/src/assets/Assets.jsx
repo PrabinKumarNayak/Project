@@ -35,9 +35,9 @@ import b3 from "./blog/b3.jpg";
 import b4 from "./blog/b4 (1).jpg";
 import b6 from "./blog/b6.jpg";
 
+import a6 from "./about/a6.jpg"
 
-
-
+import vdo from "./about/1.mp4"
 
 export const assets = {
   logo,
@@ -70,7 +70,9 @@ export const assets = {
   b2,
   b3,
   b4,
-  b6
+  b6,
+  a6,
+  vdo
 };
 
 export const feature_list = [

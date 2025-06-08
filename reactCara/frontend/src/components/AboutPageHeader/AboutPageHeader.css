@@ -1,13 +1,13 @@
-#shop-header{
+#about-header{
     width: 100%;
     height: 40vh;
-    background-image: url(b1.jpg);
+    background-image: url(banner.png);
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
 }
-#shop-header h2,
-#shop-header p{
+#about-header h2,
+#about-header p{
     color: #fff;
 }
