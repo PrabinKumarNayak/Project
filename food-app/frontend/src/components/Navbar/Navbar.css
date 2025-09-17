@@ -2,19 +2,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 20px 0px;
 }
-.navbar.logo {
+.navbar .logo {
   width: 150px;
 }
-.navbar .navbar-menu {
+.navbar-menu {
   display: flex;
   list-style: none;
   color: #49557e;
   font-size: 18px;
   gap: 20px;
 }
-.navbar .navbar-right {
+.navbar-right {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -23,17 +23,15 @@
   background: transparent;
   padding: 10px 30px;
   font-size: 16px;
-  border: 1px solid;
-  color: tomato;
+  border: 1px solid tomato;
   border-radius: 50px;
   color: #49557e;
-  transition: 0.4s;
+  transition: 1s;
 }
 .navbar button:hover {
-  color: #fff;
-  background-color: tomato;
+  background-color: #fff42f;
 }
-.navbar .navbar-menu li {
+.navbar li {
   cursor: pointer;
 }
 .navbar-search-icon {
