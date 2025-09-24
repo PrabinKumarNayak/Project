@@ -26,10 +26,14 @@
   border: 1px solid tomato;
   border-radius: 50px;
   color: #49557e;
-  transition: 1s;
+  transition: 0.3s;
 }
 .navbar button:hover {
   background-color: #fff42f;
+}
+.navbar .active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e;
 }
 .navbar li {
   cursor: pointer;
@@ -46,10 +50,22 @@
   border-radius: 5px;
   background: tomato;
 }
-.active {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #49557e;
+.hamburger-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #49557e;
 }
+.navbar-menu-header {
+    display: none;
+}
+
+.navbar-menu-mobile-controls {
+    display: none;
+}
+
+
+
 @media (max-width: 1050px) {
   .navbar .logo {
     width: 140px;
@@ -64,10 +80,11 @@
   .navbar-right img {
     width: 22px;
   }
-  .navbar-right button {
+  .navbar button {
     padding: 8px 25px;
   }
 }
+
 @media (max-width: 900px) {
   .navbar .logo {
     width: 120px;
@@ -82,13 +99,76 @@
   .navbar-right img {
     width: 20px;
   }
-  .navbar-right button {
+  .navbar button {
     padding: 7px 20px;
     font-size: 15px;
   }
 }
+
 @media (max-width: 750px) {
-  .navbar-menu {
+  .hamburger-icon {
+    display: block;
+  }
+  
+  .navbar-right .desktop-icon,
+  .navbar-right .navbar-search-icon,
+  .navbar-right button {
     display: none;
+  }
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 100;
+    padding: 20px 30px;
+    gap: 25px; /* Add gap for menu items */
+    transition: right 0.5s ease;
+  }
+  .navbar-menu.active {
+    right: 0;
+  }
+  .navbar-menu .navbar-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+   .navbar-menu .navbar-menu-header h2{
+      font-size: 24px;
+      color: tomato;
+  }
+  .navbar-menu .navbar-menu-header .close-icon {
+      font-size: 24px;
+      cursor: pointer;
+      color: #49557e;
+  }
+  .navbar-menu a {
+      font-size: 20px;
+  }
+   .navbar .active {
+    border: none;
+    color: #49557e;
+    font-weight: 500;
+  }
+
+  /* Display and style mobile controls inside menu */
+  .navbar-menu-mobile-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e2e2;
+  }
+  .navbar-menu-mobile-controls .mobile-basket {
+      position: relative;
+  }
+  .navbar-menu-mobile-controls button {
+    padding: 8px 25px;
   }
 }

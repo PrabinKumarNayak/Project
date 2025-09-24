@@ -3,51 +3,58 @@ import { assets } from "../../assets/Assets";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
-export default function Navbar({ setShowLogin }) {
-  const [menu, setMeun] = useState("home");
+import { FaBars, FaTimes } from "react-icons/fa";
 
-  const{getTotalCartAmount} = useContext(StoreContext)
+export default function Navbar({ setShowLogin }) {
+  const [menu, setMenu] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const { getTotalCartAmount } = useContext(StoreContext);
+
   return (
     <div className="navbar">
-      <Link to='/'><img src={assets.logo} className="logo" alt="" /></Link>
-      <ul className="navbar-menu">
-        <Link
-          to="/"
-          onClick={() => setMeun("home")}
-          className={menu === "home" ? "active" : ""}
-        >
+      <Link to='/'>
+        <img src={assets.logo} onClick={() => setMenuOpen(false)} className="logo" alt="Logo" />
+      </Link>
+
+      <ul className={menuOpen ? "navbar-menu active" : "navbar-menu"}>
+        <div className="navbar-menu-header">
+            <h2>Menu</h2>
+            <FaTimes className="close-icon" onClick={() => setMenuOpen(false)} />
+        </div>
+        
+        <Link to="/" onClick={() => { setMenu("home"); setMenuOpen(false); }} className={menu === "home" ? "active" : ""}>
           home
         </Link>
-        <a
-          href="#explore-menu"
-          onClick={() => setMeun("menu")}
-          className={menu === "menu" ? "active" : ""}
-        >
+        <a href="#explore-menu" onClick={() => { setMenu("menu"); setMenuOpen(false); }} className={menu === "menu" ? "active" : ""}>
           menu
         </a>
-        <a
-          href="#app-download"
-          onClick={() => setMeun("mobile-app")}
-          className={menu === "mobile-app" ? "active" : ""}
-        >
+        <a href="#app-download" onClick={() => { setMenu("mobile-app"); setMenuOpen(false); }} className={menu === "mobile-app" ? "active" : ""}>
           mobile app
         </a>
-        <a
-          href="#footer"
-          onClick={() => setMeun("contact-us")}
-          className={menu === "contact-us" ? "active" : ""}
-        >
+        <a href="#footer" onClick={() => { setMenu("contact-us"); setMenuOpen(false); }} className={menu === "contact-us" ? "active" : ""}>
           contact us
         </a>
-      </ul>
-      <div className="navbar-right">
-        <img src={assets.search_icon} alt="" />
+
+        <div className="navbar-menu-mobile-controls">
+        <img src={assets.search_icon} alt="Search" className="desktop-icon"/>
         <div className="navbar-search-icon">
-          <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
-          <div className={getTotalCartAmount()===0?"":"dot"}></div>
+          <Link to='/cart'><img src={assets.basket_icon} alt="Basket" /></Link>
+          <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
+            <button onClick={() => { setShowLogin(true); setMenuOpen(false); }}>Sign in</button>
+        </div>
+      </ul>
+
+      <div className="navbar-right">
+        <img src={assets.search_icon} alt="Search" className="desktop-icon"/>
+        <div className="navbar-search-icon">
+          <Link to='/cart'><img src={assets.basket_icon} alt="Basket" /></Link>
+          <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
+        </div>
+        <button onClick={() => setShowLogin(true)}>Sign in</button>
+        <FaBars className="hamburger-icon" onClick={() => setMenuOpen(true)} />
       </div>
-      <button onClick={() => setShowLogin(true)}>Sign in</button>
     </div>
   );
 }
