@@ -1,14 +1,64 @@
-.food-display{
-    margin-top: 30px;
+.food-display {
+  margin-top: 30px;
 }
-.food-display h2{
-    font-size: max(2vw,24px);
-    font-weight: 600;
+
+.food-display h2 {
+  font-size: max(2vw, 24px);
+  font-weight: 600;
 }
-.food-display-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
-    margin-top: 30px;
-    gap: 30px;
-    row-gap: 50px;
+
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  margin-top: 30px;
+  gap: 30px;
+  row-gap: 50px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0;
+}
+
+.pagination button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #e9e9e9;
+}
+
+.pagination button.active {
+  background-color: tomato;
+  color: white;
+  border-color: tomato;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+@media (max-width: 750px) {
+  .food-display-list {
+    /* On smaller screens, reduce the minimum card size and gap */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    row-gap: 40px;
+  }
+
+  .pagination button {
+    /* Make pagination buttons slightly smaller on mobile */
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
 }

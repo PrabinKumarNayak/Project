@@ -1,54 +1,86 @@
-.explore-menu{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.explore-menu h1{
-    color: #262626;
-    font-weight: 500;
-}
-.explore-menu-text{
-    max-width: 60%;
-    color: #808080;
-}
-.explore-menu-list{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    gap: 30px;
-    margin: 20px 0;
-    overflow-x: scroll;
-}
-.explore-menu-list::-webkit-scrollbar{
-    display: none;
-}
-.explore-menu-list img{
-    width: 7.5vw;
-    min-width: 80px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.explore-menu-list p{
-    gap: 10px;
-    color: #747474;
-    font-size: max(1.4vw,16px);
-    cursor: pointer;
-}
-.explore-menu hr{
-    margin: 10px 0;
-    height: 2px;
-    background-color: #2e2e2e;
-    border: none;
-}
-.explore-menu-list-item .active{
-    border: 4px solid tomato;
-    padding: 2px;
-}
-@media (max-width:1050px) {
-    .explore-menu-text{
-        font-size: 14px;
-        max-width: 100%;
-    }
+.explore-menu {
+  /* ✅ Using CSS variables for easier theming and maintenance */
+  --primary-color: tomato;
+  --transition-speed: 0.3s;
 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.explore-menu h1 {
+  color: #262626;
+  font-weight: 500;
+}
+
+.explore-menu-text {
+  max-width: 60%;
+  color: #808080;
+}
+
+.explore-menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Aligns items to the top for better consistency */
+  gap: 30px;
+  margin: 20px 0;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.explore-menu-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+/* ✅ This block resets the default button styles */
+.explore-menu-list-item {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.explore-menu-list-item img {
+  width: 7.5vw;
+  min-width: 80px;
+  border-radius: 50%;
+  transition: all var(--transition-speed) ease; /* ✅ Smooth transition for all changes */
+}
+
+.explore-menu-list-item p {
+  color: #747474;
+  font-size: max(1.4vw, 16px);
+  white-space: nowrap; /* Prevents menu names from wrapping */
+}
+
+/* ✅ Hover effect for non-active items */
+.explore-menu-list-item:hover img {
+    transform: scale(1.05);
+}
+
+.explore-menu-list-item .active {
+  border: 4px solid var(--primary-color); /* Use the CSS variable */
+  padding: 2px;
+}
+
+.explore-menu hr {
+  margin: 10px 0;
+  height: 2px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+@media (max-width: 1050px) {
+  .explore-menu-text {
+    font-size: 14px;
+    max-width: 100%;
+  }
 }
