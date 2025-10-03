@@ -1,6 +1,8 @@
 import Banner from "../components/Banner";
 import FeaturedSection from "../components/FeaturedSection";
 import Hero from "../components/Hero";
+import Newsletter from "../components/Newsletter";
+import Testimonial from "../components/Testimonial";
 
 export default function Home(){
     return(
@@ -8,6 +10,8 @@ export default function Home(){
             <Hero/>
             <FeaturedSection/>
             <Banner/>
+            <Testimonial/>
+            <Newsletter/>
         </>
     )
 }
