@@ -1,0 +1,135 @@
+.toc-container {
+  width: 100%;
+  background-color: var(--body-color);
+  color: var(--text-color-second);
+}
+
+.toc-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--first-color);
+  text-align: center;
+}
+
+.toc-summary {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  color: var(--text-color-second);
+  line-height: 1.6;
+}
+
+.toc-sub-container {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px var(--first-shadow-color);
+}
+
+.toc-sub-heading-desc {
+  margin-bottom: 1rem;
+}
+
+.sub-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--first-color);
+  margin-bottom: 0.25rem;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color-second);
+}
+
+.toc-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.toc-unit {
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  padding: 1rem 1.2rem;
+  border-left: 5px solid var(--second-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--first-shadow-color);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.toc-unit:hover {
+  transform: translateY(-3px);
+  background-color: #f5f9ff;
+}
+
+.toc-topic-number {
+  font-weight: 600;
+  color: var(--second-color);
+  margin-right: 0.75rem;
+  min-width: 24px;
+}
+
+.toc-topic-name {
+  font-size: 1rem;
+  color: var(--text-color-second);
+}
+
+.toc-loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: gray;
+  padding: 3rem 1rem;
+}
+
+/* ----------------------------
+   Responsive Design 
+----------------------------- */
+
+/* Below 1050px */
+@media screen and (max-width: 1050px) {
+  .toc-sub-container {
+    padding: 1.5rem;
+  }
+  .toc-heading {
+    font-size: 1.8rem;
+  }
+}
+
+/* Below 900px */
+@media screen and (max-width: 900px) {
+  .toc-heading {
+    font-size: 1.6rem;
+  }
+  .sub-heading {
+    font-size: 1.4rem;
+  }
+}
+
+/* Below 750px */
+@media screen and (max-width: 750px) {
+  .toc-sub-container {
+    padding: 1rem;
+  }
+
+  .toc-summary {
+    font-size: 0.95rem;
+  }
+  .toc-unit {
+    padding: 0.6rem 0.5rem;
+    width: 12rem;
+  }
+  .toc-topic-name {
+    font-size: 0.7rem;
+  }
+
+  .toc-topic-number {
+    font-size: 0.9rem;
+  }
+}

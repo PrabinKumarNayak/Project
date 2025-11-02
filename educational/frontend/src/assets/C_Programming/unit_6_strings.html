@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 6 - Strings in C</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 6: Strings in C</h1>
+
+    <h2>1. Introduction</h2>
+    <p>
+      A <strong>string</strong> in C is a sequence of characters terminated by a null character (<code>'\0'</code>). Strings are stored in character arrays.
+    </p>
+
+    <h2>2. Declaring Strings</h2>
+    <pre><code>char str[20];             // uninitialized
+char str[] = "Hello";    // initialized with string literal</code></pre>
+    <p>Each character is stored in a separate array element, ending with <code>'\0'</code>.</p>
+
+    <h2>3. Reading Strings</h2>
+    <p><strong>Using scanf (single word):</strong></p>
+    <pre><code>scanf("%s", str);</code></pre>
+    <p><strong>Using gets (entire line):</strong> (Note: <code>gets()</code> is unsafe and deprecated in modern C.)</p>
+    <pre><code>gets(str);</code></pre>
+    <p><strong>Using fgets (safer):</strong></p>
+    <pre><code>fgets(str, sizeof(str), stdin);</code></pre>
+
+    <h2>4. Writing Strings</h2>
+    <p><strong>Using printf:</strong></p>
+    <pre><code>printf("%s", str);</code></pre>
+
+    <h2>5. Common String Handling Functions (in &lt;string.h&gt;)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Function</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Function"><code>strlen(str)</code></td>
+          <td data-label="Description">Returns the length of the string</td>
+        </tr>
+        <tr>
+          <td data-label="Function"><code>strcpy(dest, src)</code></td>
+          <td data-label="Description">Copies one string to another</td>
+        </tr>
+        <tr>
+          <td data-label="Function"><code>strcat(dest, src)</code></td>
+          <td data-label="Description">Appends one string to another</td>
+        </tr>
+        <tr>
+          <td data-label="Function"><code>strcmp(str1, str2)</code></td>
+          <td data-label="Description">Compares two strings</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>6. String vs Character</h2>
+    <ul>
+      <li><strong>Character:</strong> Single character like <code>'A'</code></li>
+      <li><strong>String:</strong> Collection of characters like <code>"ABC"</code></li>
+    </ul>
+
+    <h2>7. String as Array</h2>
+    <p>Each character including <code>'\0'</code> is stored in an array index:</p>
+    <pre><code>char str[] = "Hi";  // stored as {'H', 'i', '\0'}</code></pre>
+
+    <h2>8. Modifying Strings</h2>
+    <p>We can access and modify individual characters using indexing:</p>
+    <pre><code>str[0] = 'h';</code></pre>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Definition and structure of strings in C</li>
+        <li>Difference between strings and characters</li>
+        <li>Reading and printing strings</li>
+        <li>String functions in <code>&lt;string.h&gt;</code></li>
+        <li>String as character arrays and null termination</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

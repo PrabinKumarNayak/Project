@@ -1,0 +1,108 @@
+.course_features {
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 3rem 1rem;
+}
+
+.course_features .course_features-title {
+  font-size: 2rem; /* ~32px */
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.course_features .course_features-subtitle {
+  font-size: 1.125rem; /* ~18px */
+  font-weight: 300;
+  color: var(--text-color-second);
+}
+
+.course_features .course_features-subtitle a {
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.course_features .course_features-subtitle a:hover {
+  color: var(--second-color);
+}
+
+.course_features .course_features-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+  gap: 2rem;
+}
+
+.course_features .feature-box {
+  text-align: center;
+  max-width: 18.75rem; /* 300px */
+  margin: 0 1rem;
+  flex: 1 1 250px;
+}
+
+.course_features .feature-icon {
+  background-color: var(--text-color-third);
+  color: white;
+  width: 5rem;  /* 80px */
+  height: 5rem;
+  font-size: 1.875rem;  /* 30px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 0.75rem;
+}
+
+.course_features .blue-btn {
+  background: var(--first-color);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.course_features .blue-btn:hover {
+  background: var(--first-color-hover);
+}
+
+/* --- Max-width 1050px --- */
+@media screen and (max-width: 65.625rem) {
+  .course_features .course_features-title {
+    font-size: 1.8rem;
+  }
+
+  .course_features .course_features-subtitle {
+    font-size: 1.05rem;
+  }
+}
+
+/* --- Max-width 900px --- */
+@media screen and (max-width: 56.25rem) {
+  .course_features .course_features-title {
+    font-size: 1.7rem;
+  }
+
+}
+
+/* --- Max-width 750px --- */
+@media screen and (max-width: 46.875rem) {
+  .course_features .course_features-title {
+    font-size: 1.6rem;
+  }
+
+  .course_features .course_features-subtitle {
+    font-size: 1rem;
+  }
+
+  .course_features .course_features-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course_features .feature-box {
+    max-width: 90%;
+  }
+}

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./ProductOne.css"
 
-export default function ProductOne({ id, brand, name, image, price }) {
+export default function ProductOne({ brand, name, image, price }) {
   return (
        <div className="pro">
        <Link to='/sproduct'><img src={image} alt="" /></Link>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 5 - Arrays in C</title>
+  <style>
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 5: Arrays in C</h1>
+
+    <h2>1. Introduction to Arrays</h2>
+    <p>
+      An <strong>array</strong> is a collection of elements of the same data type stored in contiguous memory locations. It allows storing multiple values under a single variable name.
+    </p>
+
+    <h2>2. Types of Arrays</h2>
+    <ul>
+      <li><strong>One-dimensional (1D) array:</strong> A list of elements</li>
+      <li><strong>Two-dimensional (2D) array:</strong> A matrix of elements (rows and columns)</li>
+    </ul>
+
+    <h2>3. Declaring and Initializing Arrays</h2>
+    <pre><code>int arr[5];                    // declaration
+int arr[5] = {10, 20, 30, 40, 50}; // initialization</code></pre>
+    <p>Indexing starts from <code>0</code> to <code>size-1</code>.</p>
+
+    <h2>4. Accessing Array Elements</h2>
+    <p>Use index to access or modify an element:</p>
+    <pre><code>arr[0] = 100;    // assigns 100 to the first element
+printf("%d", arr[2]); // prints third element</code></pre>
+
+    <h2>5. Traversing Arrays Using Loops</h2>
+    <p>Array elements are often accessed using loops:</p>
+    <pre><code>for (int i = 0; i < 5; i++) {
+    printf("%d ", arr[i]);
+}</code></pre>
+
+    <h2>6. Two-Dimensional Arrays</h2>
+    <pre><code>int matrix[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};</code></pre>
+    <p>Accessing elements in 2D array:</p>
+    <pre><code>printf("%d", matrix[1][2]); // prints 6</code></pre>
+
+    <h2>7. Passing Arrays to Functions</h2>
+    <p>To pass an array to a function, pass its name without brackets:</p>
+    <pre><code>void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+}</code></pre>
+
+    <h2>8. Limitations of Arrays</h2>
+    <ul>
+      <li>Fixed size — cannot grow or shrink dynamically</li>
+      <li>All elements must be of the same data type</li>
+    </ul>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Concept of 1D and 2D arrays</li>
+        <li>Syntax for declaration and initialization</li>
+        <li>Accessing and modifying elements using index</li>
+        <li>Looping through arrays with <code>for</code> loop</li>
+        <li>Passing arrays to functions</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

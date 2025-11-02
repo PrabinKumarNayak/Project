@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 4 - Functions in C</title>
+  <style>
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 4: Functions in C</h1>
+
+    <h2>1. Introduction to Functions</h2>
+    <p>
+      A <strong>function</strong> is a block of code that performs a specific task. Functions make code modular, reusable, and easier to debug.
+    </p>
+
+    <h2>2. Advantages of Using Functions</h2>
+    <ul>
+      <li>Reusability of code</li>
+      <li>Improves readability and structure</li>
+      <li>Makes testing and debugging easier</li>
+      <li>Breaks down large problems into smaller ones</li>
+    </ul>
+
+    <h2>3. Types of Functions</h2>
+    <ul>
+      <li><strong>Library Functions:</strong> Predefined functions provided by C (e.g., <code>printf()</code>, <code>scanf()</code>, <code>sqrt()</code>)</li>
+      <li><strong>User-defined Functions:</strong> Functions written by the programmer</li>
+    </ul>
+
+    <h2>4. Syntax of a Function</h2>
+    <pre><code>return_type function_name(parameter_list) {
+    // body of the function
+}</code></pre>
+    <p><strong>Example:</strong> A function to add two numbers might look like:</p>
+    <pre><code>int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+    <h2>5. Function Declaration (Prototype)</h2>
+    <p>The declaration tells the compiler about the function name, return type, and parameters before its actual definition.</p>
+    <pre><code>int add(int, int);</code></pre>
+
+    <h2>6. Function Definition</h2>
+    <p>The function definition contains the actual code to perform the task. This is written once, typically after the <code>main()</code> function or before it.</p>
+
+    <h2>7. Function Call</h2>
+    <p>To use a function, we call it from <code>main()</code> or another function using its name and passing required arguments.</p>
+    <pre><code>int result = add(5, 10);</code></pre>
+
+    <h2>8. Categories of Functions (Based on Arguments and Return Type)</h2>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Category">1. No arguments, no return value</td>
+          <td data-label="Description">Does not take inputs or return a value</td>
+        </tr>
+        <tr>
+          <td data-label="Category">2. Arguments but no return value</td>
+          <td data-label="Description">Takes input but does not return a value</td>
+        </tr>
+        <tr>
+          <td data-label="Category">3. No arguments but return value</td>
+          <td data-label="Description">Returns a result without input</td>
+        </tr>
+        <tr>
+          <td data-label="Category">4. Arguments and return value</td>
+          <td data-label="Description">Accepts input and returns output</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>9. Scope of Variables</h2>
+    <ul>
+      <li><strong>Local Variables:</strong> Declared inside a function and accessible only within it.</li>
+      <li><strong>Global Variables:</strong> Declared outside all functions and accessible by all.</li>
+    </ul>
+
+    <h2>10. Recursion</h2>
+    <p>A function that calls itself is called a <strong>recursive function</strong>. It must have a base condition to terminate the recursion.</p>
+    <pre><code>int factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}</code></pre>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Function declaration, definition, and calling</li>
+        <li>Advantages of modular programming using functions</li>
+        <li>Four categories of user-defined functions</li>
+        <li>Scope of variables (local vs global)</li>
+        <li>Understanding recursion with examples</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

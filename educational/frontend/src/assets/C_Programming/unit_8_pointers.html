@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 8 - Pointers in C</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 8: Pointers in C</h1>
+
+    <h2>1. Introduction</h2>
+    <p>
+      A <strong>pointer</strong> is a variable that stores the memory address of another variable.
+      Pointers are powerful tools for memory management, dynamic allocation, and function argument passing.
+    </p>
+
+    <h2>2. Declaring and Initializing Pointers</h2>
+    <pre><code>int *ptr;      // declaration
+int a = 10;
+ptr = &a;     // ptr holds the address of variable a</code></pre>
+
+    <h2>3. Pointer Operators</h2>
+    <ul>
+      <li><code>&</code> — Address-of operator (gets address of variable)</li>
+      <li><code>*</code> — Dereference operator (accesses value at address)</li>
+    </ul>
+
+    <h2>4. Accessing Values Using Pointers</h2>
+    <pre><code>printf("%d", *ptr);   // prints value of a</code></pre>
+
+    <h2>5. Pointer Arithmetic</h2>
+    <p>Pointers can be incremented/decremented:</p>
+    <pre><code>ptr++;
+ptr--;</code></pre>
+    <p>Pointer arithmetic depends on the data type (increments by size of type).</p>
+
+    <h2>6. Pointers and Arrays</h2>
+    <pre><code>int arr[3] = {10, 20, 30};
+int *p = arr;   // points to first element
+printf("%d", *(p + 1));  // prints second element</code></pre>
+
+    <h2>7. Pointer to Pointer</h2>
+    <p>A pointer that stores the address of another pointer.</p>
+    <pre><code>int a = 10;
+int *p = &a;
+int **q = &p;</code></pre>
+
+    <h2>8. Pointers and Functions</h2>
+    <p>Used to pass addresses to functions (pass by reference):</p>
+    <pre><code>void modify(int *x) {
+    *x = *x + 1;
+}</code></pre>
+
+    <h2>9. Dynamic Memory Allocation (Intro)</h2>
+    <p>Using <code>malloc()</code>, <code>calloc()</code>, <code>free()</code> from <code>&lt;stdlib.h&gt;</code> to allocate and deallocate memory at runtime.</p>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Concept of pointers and syntax</li>
+        <li>Pointer declaration and initialization</li>
+        <li>Dereferencing and address-of operators</li>
+        <li>Relation between pointers and arrays</li>
+        <li>Pointer to pointer, and function arguments using pointers</li>
+        <li>Basic pointer arithmetic</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

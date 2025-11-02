@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 2 - Selection Control Statements</title>
+  <style>
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 2: Selection Control Statements</h1>
+
+    <h2>1. Introduction</h2>
+    <p>In C programming, selection control statements are used to make decisions based on conditions. They allow the program to choose different paths of execution depending on whether a condition is true or false.</p>
+
+    <h2>2. Relational Operators</h2>
+    <p>Relational operators are used to compare two values:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Meaning</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Operator"><code>==</code></td>
+          <td data-label="Meaning">Equal to</td>
+          <td data-label="Example"><code>a == b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>!=</code></td>
+          <td data-label="Meaning">Not equal to</td>
+          <td data-label="Example"><code>a != b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>&gt;</code></td>
+          <td data-label="Meaning">Greater than</td>
+          <td data-label="Example"><code>a &gt; b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>&lt;</code></td>
+          <td data-label="Meaning">Less than</td>
+          <td data-label="Example"><code>a &lt; b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>&gt;=</code></td>
+          <td data-label="Meaning">Greater than or equal to</td>
+          <td data-label="Example"><code>a &gt;= b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>&lt;=</code></td>
+          <td data-label="Meaning">Less than or equal to</td>
+          <td data-label="Example"><code>a &lt;= b</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Logical Operators</h2>
+    <p>Logical operators are used to combine multiple conditions:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Meaning</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Operator"><code>&&</code></td>
+          <td data-label="Meaning">Logical AND</td>
+          <td data-label="Example"><code>(a &gt; 0 &amp;&amp; b &gt; 0)</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>||</code></td>
+          <td data-label="Meaning">Logical OR</td>
+          <td data-label="Example"><code>(a &gt; 0 || b &gt; 0)</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>!</code></td>
+          <td data-label="Meaning">Logical NOT</td>
+          <td data-label="Example"><code>!(a == b)</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. if Statement</h2>
+    <p>The <code>if</code> statement executes a block of code only if the specified condition is true.</p>
+    <pre><code>if (condition) {
+    // statements
+}</code></pre>
+
+    <h2>5. if-else Statement</h2>
+    <p>Provides two paths: one if condition is true, another if it is false.</p>
+    <pre><code>if (condition) {
+    // true block
+} else {
+    // false block
+}</code></pre>
+
+    <h2>6. Nested if-else</h2>
+    <p>Nested decision-making inside an if or else block.</p>
+    <pre><code>if (condition1) {
+    if (condition2) {
+        // inner block
+    } else {
+        // inner else block
+    }
+} else {
+    // outer else block
+}</code></pre>
+
+    <h2>7. else-if Ladder</h2>
+    <p>For multiple conditions checked sequentially.</p>
+    <pre><code>if (condition1) {
+    // block1
+} else if (condition2) {
+    // block2
+} else if (condition3) {
+    // block3
+} else {
+    // default block
+}</code></pre>
+
+    <h2>8. switch Statement</h2>
+    <p>Efficient for comparing a single variable against multiple constant values.</p>
+    <pre><code>switch (expression) {
+    case value1:
+        // statements
+        break;
+    case value2:
+        // statements
+        break;
+    default:
+        // default statements
+}</code></pre>
+    <ul>
+      <li><code>break</code> exits the switch block after a match.</li>
+      <li><code>default</code> executes when no match is found.</li>
+    </ul>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Relational and logical operators</li>
+        <li>if, if-else, nested if-else</li>
+        <li>else-if ladder for multi-condition checks</li>
+        <li>switch-case statements</li>
+        <li>Syntax clarity for each structure</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

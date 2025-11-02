@@ -1,0 +1,22 @@
+export const community = [
+  {
+    id: 1,
+    title: "Meet Your Instructor",
+    description:
+      "Burle Prasad, founder of Geecoding, is a passionate educator who believes in hands-on learning through real-world projects. To make coding accessible to everyone through practical tutorials that bridge the gap between theory and application.",
+    feature: `5+ years of teaching experience
+1000+ students taught
+50+ practical tutorials created
+Founder of Geecoding platform`,
+  },
+  {
+    id: 2,
+    title: "Anshuman Sahu",
+    description:
+      "To make coding accessible to everyone through practical tutorials that bridge the gap between theory and application.",
+    feature: `Full Stack Developer & Mentor
+Specializes in MERN & JavaScript
+Leads community workshops weekly
+Contributor to multiple open-source projects`,
+  },
+];

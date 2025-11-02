@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Class Notes – Day 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    .unit-wrapper a:hover {
+      text-decoration: underline;
+    }
+
+    .unit-wrapper .box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 12px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="unit-wrapper">
+    <h1>🐍 Python Class Notes – Day 1</h1>
+
+    <div class="box">
+      <h2>1. Installing Python</h2>
+      <ul>
+        <li>Go to <a href="https://www.python.org" target="_blank">python.org</a> and download the latest version.</li>
+        <li>Ensure you check <strong>"Add Python to PATH"</strong> during installation.</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>2. Starting IDLE</h2>
+      <p>Open IDLE after installation to begin coding. It uses a REPL (Read-Eval-Print Loop).</p>
+    </div>
+
+    <div class="box">
+      <h2>3. Understanding <code>print()</code> Function</h2>
+      <p>The <code>print()</code> function displays output to the screen.</p>
+      <p><strong>Syntax:</strong></p>
+      <pre>print(value1, value2, ..., sep=' ', end='\n')</pre>
+      <ul>
+        <li>Can print text, numbers, variables, or expressions.</li>
+        <li>Text must be in quotes: <code>'text'</code> or <code>"text"</code>.</li>
+        <li>Multiple values are separated with commas.</li>
+      </ul>
+      <p><strong>Examples:</strong></p>
+      <pre>
+print("Hello World")
+print(10 + 5)
+print("The sum is", 10 + 5)</pre>
+    </div>
+
+    <div class="box">
+      <h2>4. Using <code>print()</code> in REPL</h2>
+      <pre>
+print('Hello')
+print("Hello")</pre>
+    </div>
+
+    <div class="box">
+      <h2>5. Assigning Numeric Values</h2>
+      <pre>
+a = 10
+b = 5</pre>
+    </div>
+
+    <div class="box">
+      <h2>6. Displaying Variable Values</h2>
+      <pre>
+print(a)
+print(b)</pre>
+    </div>
+
+    <div class="box">
+      <h2>7. Adding Two Numbers</h2>
+      <pre>
+a = 10
+b = 5
+print(a + b)</pre>
+      <p><strong>Note:</strong> Only the result is shown, not a message.</p>
+    </div>
+
+    <div class="box">
+      <h2>8. Problems with REPL</h2>
+      <ul>
+        <li>Code is not saved after closing.</li>
+        <li>Not suitable for large programs.</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>9. Writing Programs in Editor</h2>
+      <ul>
+        <li>Go to <strong>File → New File</strong>.</li>
+        <li>Save with <code>.py</code> extension.</li>
+        <li>Run using <strong>Run → Run Module (F5)</strong>.</li>
+      </ul>
+      <pre>
+a = 10
+b = 5
+print(a + b)</pre>
+    </div>
+
+    <div class="box">
+      <h2>10. Showing Message with Result</h2>
+      <pre>
+a = 10
+b = 5
+print("The sum is:", a + b)</pre>
+    </div>
+
+    <div class="box">
+      <h2>11. Understanding <code>input()</code> Function</h2>
+      <p><code>input()</code> takes user input as a string.</p>
+      <pre>variable = input("Prompt message")</pre>
+      <ul>
+        <li>To do math, convert input using <code>int()</code> or <code>float()</code>.</li>
+      </ul>
+      <pre>
+name = input("Enter your name: ")
+print("Hello", name)
+
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+print(num1 + num2)  # concatenates strings
+
+# Convert to integers
+num1 = int(input("Enter a number: "))
+num2 = int(input("Enter another number: "))
+print(num1 + num2)</pre>
+    </div>
+
+    <div class="box">
+      <h2>12. String Concatenation Without Conversion</h2>
+      <pre>
+x = input("Enter first number: ")
+y = input("Enter second number: ")
+print("The sum is:", x + y)  # Output will be string concatenation (e.g. 105)</pre>
+    </div>
+
+    <div class="box">
+      <h2>13. Converting Input to Numbers</h2>
+      <pre>
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+print("The sum is:", x + y)  # Correct addition</pre>
+    </div>
+
+    <div class="box">
+      <h2>📝 Homework / Practice</h2>
+      <ul>
+        <li>Write a program to multiply two numbers using fixed values.</li>
+        <li>Take two inputs and subtract them.</li>
+        <li>Use <code>float()</code> instead of <code>int()</code> for decimal numbers.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

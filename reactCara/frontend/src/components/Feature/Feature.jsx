@@ -1,9 +1,9 @@
-import { assets, feature_list } from "../../assets/Assets";
+import {  feature_list } from "../../assets/Assets";
 import "./Feature.css"
 export default function Feature() {
   return (
     <div id="feature" class="section-p1">
-      {feature_list.map((item, index) => {
+      {feature_list.map((item) => {
         return (
           <div class="fe-box">
             <img src={item.feature_image} alt="" />

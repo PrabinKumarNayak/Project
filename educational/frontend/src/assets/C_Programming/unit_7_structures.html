@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 7 - Structures in C</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 7: Structures in C</h1>
+
+    <h2>1. Introduction</h2>
+    <p>
+      A <strong>structure</strong> in C is a user-defined data type that allows grouping variables of different types under one name. It is useful for representing complex data models.
+    </p>
+
+    <h2>2. Defining a Structure</h2>
+    <pre><code>struct Student {
+    int roll;
+    char name[20];
+    float marks;
+};</code></pre>
+
+    <h2>3. Declaring Structure Variables</h2>
+    <pre><code>struct Student s1, s2;</code></pre>
+    <p>Or combined with definition:</p>
+    <pre><code>struct Student {
+    int roll;
+    char name[20];
+    float marks;
+} s1, s2;</code></pre>
+
+    <h2>4. Accessing Structure Members</h2>
+    <p>Use the dot operator:</p>
+    <pre><code>s1.roll = 101;
+printf("%d", s1.roll);</code></pre>
+
+    <h2>5. Initializing Structures</h2>
+    <pre><code>struct Student s1 = {101, "Ravi", 87.5};</code></pre>
+
+    <h2>6. Nested Structures</h2>
+    <p>A structure inside another structure:</p>
+    <pre><code>struct Date {
+    int day, month, year;
+};
+
+struct Student {
+    int roll;
+    struct Date dob;
+};</code></pre>
+
+    <h2>7. Array of Structures</h2>
+    <p>You can create multiple structure variables using an array:</p>
+    <pre><code>struct Student s[50];</code></pre>
+    <p>Useful for storing data of many students.</p>
+
+    <h2>8. Passing Structure to Functions</h2>
+    <ul>
+      <li><strong>By value:</strong> A copy is passed, original remains unchanged.</li>
+      <li><strong>By reference:</strong> Using pointers to reflect changes on original data.</li>
+    </ul>
+
+    <h2>9. typedef with Structure</h2>
+    <p>Simplifies structure declarations:</p>
+    <pre><code>typedef struct Student {
+    int roll;
+    char name[20];
+} STU;
+
+STU s1;</code></pre>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Syntax for defining and declaring structure</li>
+        <li>Accessing and initializing structure members</li>
+        <li>Nested structures and array of structures</li>
+        <li>Passing structure to functions (value and reference)</li>
+        <li>Use of <code>typedef</code> with structures</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

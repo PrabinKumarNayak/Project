@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 9 - File Handling in C</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 9: File Handling in C</h1>
+
+    <h2>1. Introduction</h2>
+    <p>File handling in C allows us to store data permanently in a file. Files are stored on the disk and can be read from or written to using file handling functions.</p>
+
+    <h2>2. Types of Files</h2>
+    <ul>
+      <li><strong>Text Files:</strong> Human-readable format</li>
+      <li><strong>Binary Files:</strong> Non-human-readable format, used for faster access and smaller file size</li>
+    </ul>
+
+    <h2>3. File Operations</h2>
+    <ul>
+      <li>Creating a file</li>
+      <li>Opening a file</li>
+      <li>Reading and writing data</li>
+      <li>Closing a file</li>
+    </ul>
+
+    <h2>4. File Pointers</h2>
+    <p>All file operations are performed using a <code>FILE</code> pointer.</p>
+    <pre><code>FILE *fp;</code></pre>
+
+    <h2>5. Opening Files</h2>
+    <pre><code>fp = fopen("filename.txt", "mode");</code></pre>
+    <table>
+      <thead>
+        <tr><th>Mode</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Mode"><code>"r"</code></td>
+          <td data-label="Description">Open for reading. File must exist.</td>
+        </tr>
+        <tr>
+          <td data-label="Mode"><code>"w"</code></td>
+          <td data-label="Description">Open for writing. Creates new or overwrites existing file.</td>
+        </tr>
+        <tr>
+          <td data-label="Mode"><code>"a"</code></td>
+          <td data-label="Description">Append to existing file.</td>
+        </tr>
+        <tr>
+          <td data-label="Mode"><code>"r+"</code></td>
+          <td data-label="Description">Open for both reading and writing.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>6. Closing a File</h2>
+    <pre><code>fclose(fp);</code></pre>
+
+    <h2>7. Reading and Writing Characters</h2>
+    <pre><code>fputc('A', fp);           // write character
+char ch = fgetc(fp);     // read character</code></pre>
+
+    <h2>8. Reading and Writing Strings</h2>
+    <pre><code>fputs("Hello", fp);        // write string
+fgets(str, 50, fp);       // read string</code></pre>
+
+    <h2>9. Reading and Writing with Format</h2>
+    <pre><code>fprintf(fp, "%d", num);     // write formatted output
+fscanf(fp, "%d", &num);    // read formatted input</code></pre>
+
+    <h2>10. Checking for End-of-File</h2>
+    <pre><code>while (!feof(fp)) {
+  // process
+}</code></pre>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Understanding file types: text and binary</li>
+        <li>Using <code>FILE</code> pointers and file modes</li>
+        <li>Basic file operations: open, read, write, close</li>
+        <li>Functions: <code>fgetc</code>, <code>fputc</code>, <code>fgets</code>, <code>fputs</code>, <code>fprintf</code>, <code>fscanf</code></li>
+        <li>Handling end-of-file with <code>feof()</code></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

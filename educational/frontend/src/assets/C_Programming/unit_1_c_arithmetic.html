@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 1 - Basic Programs and Arithmetic Operators</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 12px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 1: Basic Programs and Arithmetic Operators</h1>
+
+    <h2>1. Introduction to C Programming</h2>
+    <p>C is a procedural and structured programming language developed by Dennis Ritchie in 1972. It is widely used in
+      system-level programming, embedded systems, and application development.</p>
+
+    <h2>2. Structure of a C Program</h2>
+    <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    // Variable Declarations
+    // Logic and statements
+    return 0;
+}</code></pre>
+    <ul>
+      <li><code>#include &lt;stdio.h&gt;</code>: Includes standard input/output functions.</li>
+      <li><code>main()</code>: The entry point of a C program.</li>
+      <li><code>return 0;</code>: Indicates successful program execution.</li>
+    </ul>
+
+    <h2>3. Variables and Data Types</h2>
+    <p>C is a statically typed language. Common data types include:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Data Type"><code>int</code></td>
+          <td data-label="Description">Integer values</td>
+          <td data-label="Example"><code>int age = 21;</code></td>
+        </tr>
+        <tr>
+          <td data-label="Data Type"><code>float</code></td>
+          <td data-label="Description">Decimal values</td>
+          <td data-label="Example"><code>float pi = 3.14;</code></td>
+        </tr>
+        <tr>
+          <td data-label="Data Type"><code>char</code></td>
+          <td data-label="Description">Single character</td>
+          <td data-label="Example"><code>char grade = 'A';</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Input and Output Functions</h2>
+    <h3>printf() - Output</h3>
+    <p>Used to display output on the screen.</p>
+    <pre><code>printf("Sum = %d", sum);</code></pre>
+
+    <h3>scanf() - Input</h3>
+    <p>Used to take input from the user.</p>
+    <pre><code>scanf("%d", &amp;a);</code></pre>
+    <p><strong>Note:</strong> Use <code>&amp;</code> to provide the address of the variable.</p>
+
+    <h2>5. Arithmetic Operators</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Operator"><code>+</code></td>
+          <td data-label="Description">Addition</td>
+          <td data-label="Example"><code>a + b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>-</code></td>
+          <td data-label="Description">Subtraction</td>
+          <td data-label="Example"><code>a - b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>*</code></td>
+          <td data-label="Description">Multiplication</td>
+          <td data-label="Example"><code>a * b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>/</code></td>
+          <td data-label="Description">Division (quotient)</td>
+          <td data-label="Example"><code>a / b</code></td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>%</code></td>
+          <td data-label="Description">Modulus (remainder)</td>
+          <td data-label="Example"><code>a % b</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>6. Integer vs Float Division</h2>
+    <ul>
+      <li><strong>Integer division</strong>: <code>5 / 2</code> results in <code>2</code></li>
+      <li><strong>Float division</strong>: <code>5.0 / 2</code> or <code>(float)5 / 2</code> results in <code>2.5</code>
+      </li>
+    </ul>
+
+    <h2>7. Constants</h2>
+    <p>Constants are values that do not change during program execution.</p>
+    <pre><code>#define PI 3.14</code></pre>
+
+    <h2>8. Operator Precedence</h2>
+    <ol>
+      <li><code>*</code>, <code>/</code>, <code>%</code> (Higher precedence)</li>
+      <li><code>+</code>, <code>-</code> (Lower precedence)</li>
+    </ol>
+    <p>Operators with the same precedence are evaluated from <strong>left to right</strong>.</p>
+
+    <h2>9. Modulus and Digit Extraction</h2>
+    <ul>
+      <li><code>n % 10</code>: Gives the last digit</li>
+      <li><code>n / 10</code>: Removes the last digit</li>
+    </ul>
+    <p>This is useful for operations like finding the last digit, summing digits, or reversing numbers.</p>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Structure and syntax of a C program</li>
+        <li>Variable declaration and data types</li>
+        <li>Using <code>scanf</code> and <code>printf</code></li>
+        <li>Arithmetic operators and precedence</li>
+        <li>Use of <code>%</code> and <code>/</code> for digit operations</li>
+        <li>Difference between integer and float division</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

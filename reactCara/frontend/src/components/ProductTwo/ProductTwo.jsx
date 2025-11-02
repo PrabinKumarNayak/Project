@@ -1,6 +1,6 @@
 import "./ProductTwo.css"
 
-export default function ProductTwo({ id, brand, name, image, price }) {
+export default function ProductTwo({ brand, name, image, price }) {
   return (
        <div className="pro">
        <img src={image} alt="" />

@@ -1,0 +1,162 @@
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--body-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.4rem;
+}
+
+.logo img {
+  width: 2.7rem;
+  height: 2.3rem;
+}
+
+.name-designation h4 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #222;
+}
+
+.name-designation h4 span {
+  color: #ff9209;
+  font-size: 1.2rem;
+}
+
+.name-designation span {
+  font-size: 0.98rem;
+  color: #9ca3af;
+}
+
+/* Navbar Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.4s ease;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+  font-size: 1.1rem;
+}
+
+/* Menu Links */
+.navbar-menu a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color-second);
+  padding-bottom: 4px;
+}
+
+.navbar-menu a.active {
+  color: var(--first-color);
+}
+
+.navbar-menu a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 50%;
+  background: var(--first-color);
+  transition: all 0.3s ease;
+}
+
+/* Toggle (hamburger) */
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--first-color);
+  cursor: pointer;
+  z-index: 1001;
+}
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1050px) {
+  .navbar-right {
+    gap: 1.5rem;
+  }
+
+  .navbar-menu {
+    gap: 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    width: fit-content;
+  }
+  .navbar-menu a.active::after {
+    width: 5%;
+  }
+  .navbar-right {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--body-color);
+    padding: 5rem 2rem;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .navbar.open .navbar-right {
+    left: 0;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .logo img {
+    width: 2.4rem;
+    height: 2.1rem;
+  }
+  .name-designation span {
+    font-size: 1rem;
+  }
+  .name-designation h4 {
+    font-size: 1.1rem;
+  }
+  .name-designation h4 span {
+    font-size: 1.1rem;
+  }
+  .navbar-menu a.active::after {
+    width: 10%;
+  }
+  .navbar {
+    padding: 1rem 1.2rem;
+  }
+}

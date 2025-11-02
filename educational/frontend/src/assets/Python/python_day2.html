@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Class Notes - Day 2</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 12px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="unit-wrapper">
+    <h1>Python Class Notes – Day 2</h1>
+
+    <h2>1. Accept Two Numbers and Display Their Sum</h2>
+    <pre><code>a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("Sum is:", a + b)</code></pre>
+
+    <h2>2. Accept Three Numbers and Perform Operations</h2>
+    <pre><code>a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+print("Sum of first and second number:", a + b)
+print("Multiplication of second and third number:", b * c)</code></pre>
+
+    <h2>3. Area of a Circle</h2>
+    <pre><code>radius = float(input("Enter radius: "))
+area = 3.14 * radius * radius
+print("Area of circle:", area)</code></pre>
+
+    <h2>4. Area of a Triangle</h2>
+    <pre><code>base = float(input("Enter base: "))
+height = float(input("Enter height: "))
+area = 0.5 * base * height
+print("Area of triangle:", area)</code></pre>
+
+    <h2>5. Accept Roll Number and Name</h2>
+    <pre><code>roll = input("Enter roll number: ")
+name = input("Enter name: ")
+
+print("Roll Number:", roll)
+print("Name:", name)</code></pre>
+
+    <h2>6. Accept Marks and Display Total & Percentage</h2>
+    <pre><code>roll = input("Enter roll number: ")
+name = input("Enter name: ")
+m1 = int(input("Marks in subject 1: "))
+m2 = int(input("Marks in subject 2: "))
+m3 = int(input("Marks in subject 3: "))
+
+total = m1 + m2 + m3
+percentage = total / 3
+
+print("Total:", total)
+print("Percentage:", percentage)</code></pre>
+
+    <h2>7. Arithmetic Operators in Python</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Operator</th>
+          <th>Description</th>
+          <th>Example</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Operator"><code>+</code></td>
+          <td data-label="Description">Addition</td>
+          <td data-label="Example"><code>5 + 3</code></td>
+          <td data-label="Result">8</td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>-</code></td>
+          <td data-label="Description">Subtraction</td>
+          <td data-label="Example"><code>10 - 4</code></td>
+          <td data-label="Result">6</td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>*</code></td>
+          <td data-label="Description">Multiplication</td>
+          <td data-label="Example"><code>6 * 7</code></td>
+          <td data-label="Result">42</td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>/</code></td>
+          <td data-label="Description">Division</td>
+          <td data-label="Example"><code>15 / 2</code></td>
+          <td data-label="Result">7.5</td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>//</code></td>
+          <td data-label="Description">Floor Division</td>
+          <td data-label="Example"><code>15 // 2</code></td>
+          <td data-label="Result">7</td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>%</code></td>
+          <td data-label="Description">Modulus</td>
+          <td data-label="Example"><code>15 % 2</code></td>
+          <td data-label="Result">1</td>
+        </tr>
+        <tr>
+          <td data-label="Operator"><code>**</code></td>
+          <td data-label="Description">Exponentiation</td>
+          <td data-label="Example"><code>2 ** 3</code></td>
+          <td data-label="Result">8</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>8. Digit Operations on 3-digit Numbers</h2>
+    <pre><code>num = int(input("Enter a 3-digit number: "))
+
+# Last digit
+print("Last digit:", num % 10)
+
+# Second digit
+print("Second digit:", (num // 10) % 10)
+
+# First digit
+print("First digit:", num // 100)</code></pre>
+
+    <h2>9. Sum and Reverse of Digits</h2>
+    <pre><code>d1 = num % 10
+d2 = (num // 10) % 10
+d3 = num // 100
+
+print("Sum of digits:", d1 + d2 + d3)
+print("Reversed number:", d1 * 100 + d2 * 10 + d3)</code></pre>
+  </div>
+</body>
+
+</html>

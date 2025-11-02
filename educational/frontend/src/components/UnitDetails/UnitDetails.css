@@ -1,0 +1,89 @@
+/* UnitDetail.css */
+
+.unit-container {
+  background-color: var(--body-color);
+  min-height: 100vh;
+  color: var(--text-color-second);
+}
+
+.unit-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
+}
+
+.unit-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color-third);
+  margin-bottom: 2rem;
+}
+
+.unit-html-content {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px var(--first-shadow-color);
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.unit-message {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: gray;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Design */
+
+/* Up to 1050px */
+@media (max-width: 1050px) {
+  .section-p1 {
+    padding: 2.5rem 3rem;
+  }
+
+  .unit-heading {
+    font-size: 2.2rem;
+  }
+
+  .unit-html-content {
+    padding: 1.5rem;
+  }
+}
+
+/* Up to 900px */
+@media (max-width: 900px) {
+  .section-p1 {
+    padding: 2rem 2rem;
+  }
+
+  .unit-heading {
+    font-size: 2rem;
+  }
+
+  .unit-html-content {
+    padding: 1.2rem;
+  }
+}
+
+/* Up to 750px */
+@media (max-width: 750px) {
+  .section-p1 {
+    padding: 1.5rem 1rem;
+  }
+
+  .unit-heading {
+    font-size: 1.7rem;
+  }
+
+  .unit-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .unit-html-content {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}

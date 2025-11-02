@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Day 3 – Conditional Statements</title>
+  <style>
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 12px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="unit-wrapper">
+    <h1>🐍 Python Class Notes – Day 3</h1>
+    <h2>Topic: Conditional Statements</h2>
+
+    <h2>A. Introduction to Conditional Statements</h2>
+    <p>Conditional statements allow a program to make decisions based on conditions.</p>
+
+    <h2>1. <code>if</code> Statement</h2>
+    <p>The <code>if</code> statement runs a block only if a condition is true.</p>
+    <pre>if condition:
+    # block of code</pre>
+    <strong>Example:</strong>
+    <pre>
+age = 20
+if age > 18:
+    print("You are eligible")
+    </pre>
+
+    <h2>2. Relational Operators</h2>
+    <p>Used to compare two values and return <code>True</code> or <code>False</code>.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Operator</th><th>Meaning</th><th>Example</th><th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Operator"><code>></code></td><td data-label="Meaning">Greater than</td><td data-label="Example">5 &gt; 3</td><td data-label="Result">True</td></tr>
+        <tr><td data-label="Operator"><code>&lt;</code></td><td data-label="Meaning">Less than</td><td data-label="Example">3 &lt; 2</td><td data-label="Result">False</td></tr>
+        <tr><td data-label="Operator"><code>&gt;=</code></td><td data-label="Meaning">Greater or equal</td><td data-label="Example">5 &gt;= 5</td><td data-label="Result">True</td></tr>
+        <tr><td data-label="Operator"><code>&lt;=</code></td><td data-label="Meaning">Less or equal</td><td data-label="Example">4 &lt;= 5</td><td data-label="Result">True</td></tr>
+        <tr><td data-label="Operator"><code>==</code></td><td data-label="Meaning">Equal to</td><td data-label="Example">5 == 5</td><td data-label="Result">True</td></tr>
+        <tr><td data-label="Operator"><code>!=</code></td><td data-label="Meaning">Not equal</td><td data-label="Example">5 != 3</td><td data-label="Result">True</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Programs Using Simple <code>if</code></h2>
+    <h3>Program 1</h3>
+    <pre>
+num = int(input("Enter a number: "))
+if num > 18:
+    print("Your Name")</pre>
+
+    <h3>Program 2</h3>
+    <pre>
+num = int(input("Enter a number: "))
+if num > 18:
+    print("First Name")
+else:
+    print("Surname")</pre>
+
+    <h2>Boolean Expressions</h2>
+    <pre>
+print(5 > 3)     # True
+print(4 == 7)    # False
+print(10 != 5)   # True</pre>
+
+    <h2>Importance of Indentation</h2>
+    <pre>
+age = 20
+if age > 18:
+    print("Adult")
+print("Done")</pre>
+
+    <h2>B. <code>if...else</code> Statement</h2>
+    <pre>
+if condition:
+    # true block
+else:
+    # false block</pre>
+
+    <h2>Logical Operators</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Operator</th><th>Meaning</th><th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td data-label="Operator"><code>and</code></td><td data-label="Meaning">Both must be true</td><td data-label="Example">x > 0 and x < 10</td></tr>
+        <tr><td data-label="Operator"><code>or</code></td><td data-label="Meaning">At least one true</td><td data-label="Example">x < 0 or x > 10</td></tr>
+        <tr><td data-label="Operator"><code>not</code></td><td data-label="Meaning">Reverses condition</td><td data-label="Example">not(x > 5)</td></tr>
+      </tbody>
+    </table>
+
+    <!-- You can continue similarly for other programs and sections -->
+  </div>
+</body>
+</html>

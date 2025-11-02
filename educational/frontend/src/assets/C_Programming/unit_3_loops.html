@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 3 - Looping Statements in C</title>
+  <style>
+    .unit-wrapper {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+      background: #fdfdfd;
+    }
+
+    .unit-wrapper h1,
+    .unit-wrapper h2,
+    .unit-wrapper h3 {
+      color: #005b96;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+    }
+
+    .unit-wrapper p,
+    .unit-wrapper ul,
+    .unit-wrapper ol,
+    .unit-wrapper pre,
+    .unit-wrapper table {
+      margin-bottom: 1.2em;
+    }
+
+    .unit-wrapper ul,
+    .unit-wrapper ol {
+      padding-left: 20px;
+    }
+
+    .unit-wrapper li {
+      margin-bottom: 8px;
+    }
+
+    .unit-wrapper code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .unit-wrapper pre {
+      background: #f4f4f4;
+      padding: 12px;
+      border-left: 4px solid #005b96;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    .unit-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .unit-wrapper th,
+    .unit-wrapper td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .unit-wrapper th {
+      background-color: #e0ebf5;
+    }
+
+    .unit-wrapper .summary-box {
+      background: #e8f0fe;
+      padding: 16px;
+      border-left: 4px solid #005b96;
+      margin-top: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 750px) {
+      .unit-wrapper {
+        padding: 14px;
+        font-size: 16px;
+      }
+
+      .unit-wrapper h1,
+      .unit-wrapper h2,
+      .unit-wrapper h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5em;
+      }
+
+      .unit-wrapper ul,
+      .unit-wrapper ol {
+        padding-left: 18px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper li {
+        margin-bottom: 10px;
+      }
+
+      .unit-wrapper pre {
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 1.4em;
+      }
+
+      .unit-wrapper table,
+      .unit-wrapper thead,
+      .unit-wrapper tbody,
+      .unit-wrapper th,
+      .unit-wrapper td,
+      .unit-wrapper tr {
+        display: block;
+      }
+
+      .unit-wrapper thead {
+        display: none;
+      }
+
+      .unit-wrapper tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .unit-wrapper td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      .unit-wrapper td:last-child {
+        border-bottom: none;
+      }
+
+      .unit-wrapper td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+        width: 45%;
+        flex-shrink: 0;
+      }
+
+      .unit-wrapper .summary-box {
+        padding: 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="unit-wrapper">
+    <h1>Unit 3: Looping Statements in C</h1>
+
+    <h2>1. Introduction</h2>
+    <p>
+      In programming, loops are used to execute a block of code repeatedly as long as a specified condition is true.
+      C provides three primary loop constructs: <code>for</code>, <code>while</code>, and <code>do-while</code>.
+    </p>
+
+    <h2>2. Types of Loops</h2>
+    <ul>
+      <li><strong>Entry-Controlled Loops:</strong> Condition is checked before the loop body is executed (e.g., <code>for</code> and <code>while</code> loops).</li>
+      <li><strong>Exit-Controlled Loops:</strong> Loop body is executed at least once before condition is checked (e.g., <code>do-while</code> loop).</li>
+    </ul>
+
+    <h2>3. The <code>for</code> Loop</h2>
+    <p>The <code>for</code> loop is best when the number of iterations is known in advance.</p>
+    <pre><code>for (initialization; condition; increment/decrement) {
+    // loop body
+}</code></pre>
+    <ul>
+      <li><code>initialization</code>: Sets the starting value.</li>
+      <li><code>condition</code>: Checked before every iteration. Loop runs if true.</li>
+      <li><code>increment/decrement</code>: Updates the loop variable after each iteration.</li>
+    </ul>
+
+    <h2>4. The <code>while</code> Loop</h2>
+    <p>Used when the number of iterations is not known in advance.</p>
+    <pre><code>while (condition) {
+    // loop body
+}</code></pre>
+    <p><strong>Note:</strong> Condition is checked before entering the loop body. If the condition is false initially, the loop will not run.</p>
+
+    <h2>5. The <code>do-while</code> Loop</h2>
+    <p>Executes the loop body at least once, and then checks the condition.</p>
+    <pre><code>do {
+    // loop body
+} while (condition);</code></pre>
+    <p><strong>Note:</strong> The condition is checked after one execution.</p>
+
+    <h2>6. Loop Control Statements</h2>
+    <ul>
+      <li><strong><code>break</code></strong>: Terminates the loop immediately.</li>
+      <li><strong><code>continue</code></strong>: Skips the current iteration and continues with the next.</li>
+    </ul>
+
+    <h2>7. Nested Loops</h2>
+    <p>Using one loop inside another is called nesting. Commonly used for matrix operations or pattern printing.</p>
+    <pre><code>for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; m; j++) {
+        // inner loop body
+    }
+}</code></pre>
+
+    <div class="summary-box">
+      <h3>Summary – Key Exam Concepts</h3>
+      <ul>
+        <li>Types of loops: <code>for</code>, <code>while</code>, <code>do-while</code></li>
+        <li>Syntax and use-cases of each loop</li>
+        <li>Entry vs Exit controlled loops</li>
+        <li>Use of <code>break</code> and <code>continue</code></li>
+        <li>Understanding nested loops</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

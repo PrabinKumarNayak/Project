@@ -1,0 +1,175 @@
+.community-wrapper {
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.community-title {
+  font-size: max(2.5vw, 1.75rem);
+  font-weight: 700;
+  margin-bottom: 1.875rem;
+  color: #333;
+}
+
+.community-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+  padding: 0.625rem;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+.nav-btn:hover {
+  color: #000;
+}
+
+.community-card {
+  display: none;
+  background-color: #fff;
+  padding: 1.875rem 1.5625rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.08);
+  text-align: left;
+  max-width: 68.75rem;
+  min-height: 18.75rem;
+  margin: 0 0.9375rem;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.community-card.inactive {
+  display: none;
+}
+
+.community-card.active {
+  display: flex;
+}
+
+.community-image {
+  width: 20.75rem;
+  height: 20.75rem;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  flex-shrink: 0;
+}
+
+.community-details {
+  flex: 1;
+}
+
+.community-name {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  color: #222;
+}
+
+.community-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.9375rem;
+  line-height: 1.6;
+}
+
+.community-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.625rem;
+}
+
+.community-features li {
+  font-size: 0.9375rem;
+  color: #333;
+  margin-bottom: 0.375rem;
+  display: flex;
+  align-items: center;
+}
+
+.community-features li::before {
+  content: "✓";
+  color: #3b82f6;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.btn {
+  width: fit-content;
+  margin-top: 1.25rem;
+}
+
+/* Responsive Design */
+
+/* For screens ≤ 1050px */
+@media (max-width: 1050px) {
+  .community-card {
+    max-width: 37.5rem;
+    padding: 1.5625rem 1.25rem;
+    gap: 0.9375rem;
+  }
+
+  .community-image {
+    width: 6.875rem;
+    height: 6.875rem;
+  }
+
+  .community-name {
+    font-size: 1.25rem;
+  }
+}
+
+/* For screens ≤ 900px */
+@media (max-width: 900px) {
+  .community-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .community-details {
+    text-align: center;
+  }
+}
+
+/* For screens ≤ 750px */
+@media (max-width: 750px) {
+  .community-container {
+    flex-direction: column;
+  }
+  .community-image {
+    width: 12rem;
+    height: 12rem;
+  }
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   
+  }
+
+  .nav-btn.left {
+    left: -1.5rem;
+  }
+
+  .nav-btn.right {
+    right: -1.5rem;
+  }
+
+  .community-card {
+    margin: 1.25rem 0;
+    width: 90%;
+  }
+}

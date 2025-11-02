@@ -1,0 +1,138 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+  padding: 2rem 4vw;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 280px;
+}
+
+.header-subtitle {
+  padding: 0.4rem 2rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  width: fit-content;
+  background-color: #e8f5ff;
+  color: var(--text-color-third);
+  font-size: 0.95rem;
+}
+
+.header-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.header-description {
+  color: var(--text-color-second);
+  letter-spacing: 0.065rem;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.header-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-btn .blue-btn {
+  background: var(--first-color);
+  color: var(--color-white);
+}
+
+.header-btn .blue-btn:hover {
+  background: var(--first-color-hover);
+}
+
+.header-right {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+
+@media (max-width: 1050px) {
+  .header-title {
+    font-size: 3rem;
+  }
+
+  .header-description {
+    font-size: 0.95rem;
+  }
+
+  .header-btn {
+    gap: 0.8rem;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 2rem 2vw;
+  }
+
+  .header-left {
+    align-items: center;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .header-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .header-btn {
+    justify-content: center;
+  }
+
+  .header-right {
+    margin-top: 2rem;
+  }
+}
+
+
+@media (max-width: 750px) {
+  .header-subtitle {
+    font-size: 0.85rem;
+    padding: 0.4rem 1.5rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-description {
+    font-size: 0.85rem;
+  }
+
+  .header-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-btn .btn {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+}

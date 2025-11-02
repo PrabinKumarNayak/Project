@@ -1,0 +1,139 @@
+
+
+.module-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.module-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.module-description {
+  font-size: 1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+.module-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.module-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.module-card {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.module-card:hover {
+  transform: translateY(-5px);
+}
+
+.module-section-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+
+.module-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.module-item {
+  background-color: white;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.module-item:hover {
+  background-color: #f0f0ff;
+  color: #4e4eff;
+}
+
+.module-icon {
+  font-size: 1.8rem;
+  color: #7a5af8;
+  margin-bottom: 0.5rem;
+}
+
+
+.course-block {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .module-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .module-card {
+    width: 90%;
+  }
+
+  .module-items-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .module-title {
+    font-size: 1.75rem;
+  }
+
+  .module-description {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .module-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .module-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-card {
+    padding: 1rem;
+  }
+
+  .module-item {
+    font-size: 0.85rem;
+  }
+
+  .module-icon {
+    font-size: 1.5rem;
+  }
+}
