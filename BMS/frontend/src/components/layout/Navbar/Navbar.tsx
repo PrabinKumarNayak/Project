@@ -7,8 +7,8 @@ import { brandConfig, searchConfig } from "@/data/Navbar/navbarData";
 
 function Navbar() {
   return (
-    <nav className="w-full py-3">
-      <div className="flex items-center justify-between gap-8">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-(--color-white) py-3">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-8 px-4 tablet:px-6 desktop-sm:px-10">
         {/* Brand */}
         <Link to="/" className="flex items-center gap-2.5">
           <div className="flex h-11 w-11 items-center justify-center rounded-full border border-(--color-border-light) bg-(--color-brand-light)">

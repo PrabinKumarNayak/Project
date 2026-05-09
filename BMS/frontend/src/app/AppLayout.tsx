@@ -20,7 +20,7 @@ const AppLayout = ({
       </div>
 
       {/* Main Content */}
-      <main className="mx-auto w-full max-w-[1200px] flex-grow px-4 py-6 tablet:px-6 desktop-sm:px-10">
+      <main className="pt-[80px] mx-auto w-full max-w-[1200px] flex-grow px-4 py-6 tablet:px-6 desktop-sm:px-10">
 
         {children}
 
