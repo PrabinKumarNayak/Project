@@ -1,5 +1,5 @@
 import BannerOne from "@/assets/banner-1.jpg";
-import BannerTwo from "@/assets/banner-2.jpg";
+import SummerBanner from "@/assets/banner-2.jpg";
 
 import ShirtImage from "@/assets/shirt.jpg";
 import HandkerchiefImage from "@/assets/handkerchief.jpg";
@@ -17,7 +17,7 @@ import GoldPassBag from "@/assets/gold-pass-bag.jpg";
 
 export const APP_IMAGES = {
   BannerOne,
-  BannerTwo,
+  SummerBanner,
   ShirtImage,
   HandkerchiefImage,
   SareeImage,

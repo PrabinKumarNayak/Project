@@ -1,44 +1,83 @@
-import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
 
 import { heroBannerData } from "@/data/HeroBanner/heroBannerData";
 
 function HeroBanner() {
-  const [currentBanner, setCurrentBanner] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBanner((prevBanner) =>
-        prevBanner === heroBannerData.length - 1 ? 0 : prevBanner + 1,
-      );
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <div className="w-full">
-      <div className="relative h-[420px] w-full overflow-hidden rounded-[28px]">
+    <section className="my-5 w-full">
+      <div className="relative h-[500px] w-full overflow-hidden rounded-[30px]">
+        {/* Banner Image */}
         <img
-          src={heroBannerData[currentBanner].image}
+          src={heroBannerData.image}
           alt="Hero Banner"
-          className="h-full w-full object-cover transition-all duration-700"
+          className="h-full w-full object-cover"
         />
 
-        {/* Slider Indicators */}
-        <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 items-center gap-2">
-          {heroBannerData.map((_, index) => (
-            <button
-              key={index}
-              className={`
-                h-2 rounded-full transition-all duration-300
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/15" />
 
-                ${currentBanner === index ? "w-6 bg-white" : "w-2 bg-white/50"}
-              `}
-            />
-          ))}
+        {/* Content */}
+        <div className="absolute right-16 top-1/2 z-10 flex -translate-y-1/2 flex-col items-end">
+          <p
+            className="
+              text-right
+
+              text-[34px]
+              font-semibold
+
+              text-white
+            "
+          >
+            {heroBannerData.heading}
+          </p>
+
+          <h1
+            className="
+              mt-2
+
+              text-right
+
+              text-[90px]
+              font-bold
+
+              leading-none
+
+              text-white
+            "
+          >
+            {heroBannerData.discount}
+          </h1>
+
+          <Button
+            variant="outline"
+            size="lg"
+            className="
+              mt-8
+
+              rounded-full
+
+              border-white/70
+
+              bg-white/10
+
+              px-10 py-6
+
+              text-lg
+              font-medium
+
+              text-white
+
+              backdrop-blur-md
+
+              hover:bg-white
+              hover:text-black
+            "
+          >
+            {heroBannerData.buttonText}
+          </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

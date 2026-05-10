@@ -17,7 +17,7 @@ function Navbar() {
             </span>
           </div>
 
-          <h1 className="text-[22px] font-semibold text-(--color-text-main)">
+          <h1 className="text-section-heading text-(--color-text-main)">
             {brandConfig.title}
           </h1>
         </Link>
