@@ -1,4 +1,5 @@
-import CategoryBar from "./components/CategoryBar/CategoryBar"
+import BudgetFriendly from "./components/BudgetFriendly/BudgetFriendly"
+import CategoryBar from "./components/CollectionBar/CollectionBar"
 import GoldPassSection from "./components/GoldPassSection/GoldPassSection"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
 import PopularCategories from "./components/PopularCategories/PopularCategories"
@@ -9,6 +10,7 @@ const Home = () => {
         <CategoryBar/>
         <HeroBanner/>
         <PopularCategories/>
+        <BudgetFriendly/>
         <GoldPassSection/>
     </>
   )

@@ -6,12 +6,21 @@ export interface HeroBannerItem {
   heading: string;
   discount: string;
   buttonText: string;
+  designs: string[];
 }
 
 export const heroBannerData: HeroBannerItem = {
   id: 1,
   image: APP_IMAGES.SummerBanner,
-  heading: "Prices Crashing On Top Brands",
-  discount: "50-80% OFF",
+  heading: "Best Selling Sambalpuri Designs",
+  discount: "Save Up to 50%",
   buttonText: "Shop Now",
+  designs: [
+    "Chakra Design",
+    "Pasapalli Design",
+    "Hati Design",
+    "Shankha Design",
+    "Mayura Design",
+    "Phula Design",
+  ],
 };

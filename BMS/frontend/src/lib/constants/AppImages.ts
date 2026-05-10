@@ -9,6 +9,12 @@ import KurtaMenImage from "@/assets/kurta-men.jpg";
 import EthnicDressImage from "@/assets/ethnic-dress.jpg";
 import BagsImage from "@/assets/bags.jpg";
 
+import BudgetShirt from "@/assets/budget-shirt.jpg";
+import BudgetKurta from "@/assets/budget-kurta.jpg";
+import BudgetSaree from "@/assets/budget-saree.jpg";
+import BudgetBag from "@/assets/budget-bag.jpg";
+import BudgetPant from "@/assets/budget-pant.jpg";
+
 import GoldPassShirt from "@/assets/gold-pass-shirt.jpg";
 import GoldPassKurta from "@/assets/gold-pass-kurta.jpg";
 import GoldPassSaree from "@/assets/gold-pass-saree.jpg";
@@ -25,6 +31,11 @@ export const APP_IMAGES = {
   KurtaMenImage,
   EthnicDressImage,
   BagsImage,
+  BudgetShirt,
+  BudgetKurta,
+  BudgetSaree,
+  BudgetBag,
+  BudgetPant,
   GoldPassShirt,
   GoldPassKurta,
   GoldPassSaree,

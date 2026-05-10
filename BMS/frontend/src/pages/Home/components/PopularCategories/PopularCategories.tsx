@@ -2,7 +2,7 @@ import { popularCategoriesData } from "@/data/PopularCategories/popularCategorie
 
 function PopularCategories() {
   return (
-    <section className="w-full pt-[20px]">
+    <section className="w-full mt-[50px]">
       <div className="space-y-6">
         {/* Heading */}
         <div>
