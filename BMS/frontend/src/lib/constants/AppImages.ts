@@ -9,6 +9,12 @@ import KurtaMenImage from "@/assets/kurta-men.jpg";
 import EthnicDressImage from "@/assets/ethnic-dress.jpg";
 import BagsImage from "@/assets/bags.jpg";
 
+import GoldPassShirt from "@/assets/gold-pass-shirt.jpg";
+import GoldPassKurta from "@/assets/gold-pass-kurta.jpg";
+import GoldPassSaree from "@/assets/gold-pass-saree.jpg";
+import GoldPassKurti from "@/assets/gold-pass-kurti.jpg";
+import GoldPassBag from "@/assets/gold-pass-bag.jpg";
+
 export const APP_IMAGES = {
   BannerOne,
   BannerTwo,
@@ -19,4 +25,9 @@ export const APP_IMAGES = {
   KurtaMenImage,
   EthnicDressImage,
   BagsImage,
+  GoldPassShirt,
+  GoldPassKurta,
+  GoldPassSaree,
+  GoldPassKurti,
+  GoldPassBag,
 };
