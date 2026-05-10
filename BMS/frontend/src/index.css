@@ -62,11 +62,6 @@
   --color-text-secondary: #475569;
   --color-text-muted: #6b7280;
 
-  /* Gold Pass Gradient */
-  --color-gradient-start: #e0f2fe;
-  --color-gradient-middle: #dbeafe;
-  --color-gradient-end: #f0f9ff;
-
   --color-surface: #f3f4f6;
   --color-border-light: #fecaca;
   --background: oklch(1 0 0);
