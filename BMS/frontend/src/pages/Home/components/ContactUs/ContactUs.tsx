@@ -62,7 +62,7 @@ const renderContactItem = ({
 
 const renderContactDetails = () => {
   return (
-    <div className="mt-10 space-y-6">
+    <div className="mt-[50px] space-y-6">
       {renderContactItem({
         icon: (
           <Phone className="size-5 text-(--color-brand-primary)" />

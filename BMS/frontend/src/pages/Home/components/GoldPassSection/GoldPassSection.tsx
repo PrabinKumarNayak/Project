@@ -61,7 +61,7 @@ const renderCards = () => {
 
 function GoldPassSection() {
   return (
-    <section className="overflow-hidden rounded-[40px] px-2 py-10">
+    <section className="mt-[50px] overflow-hidden rounded-[40px] ">
       {renderHeader()}
 
       {renderCards()}

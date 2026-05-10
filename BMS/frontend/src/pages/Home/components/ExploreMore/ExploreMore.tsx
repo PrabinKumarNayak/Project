@@ -27,7 +27,7 @@ const renderProducts = () => {
 
 const ExploreMore = () => {
   return (
-    <section className="my-[28px] w-full">
+    <section className="mt-[50px] w-full">
       <div className="space-y-6">
         {renderHeading()}
         {renderProducts()}

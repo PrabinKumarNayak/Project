@@ -109,7 +109,7 @@ const renderDiscountBadge = (product: GoldPassProduct) => {
 
 const renderBottomContent = (product: GoldPassProduct) => {
   return (
-    <div className="space-y-4 p-5">
+    <div className="space-y-3 py-5">
       {renderProductTitle(product)}
 
       {renderPricing(product)}

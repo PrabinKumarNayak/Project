@@ -5,6 +5,7 @@ import ExploreMore from "./components/ExploreMore/ExploreMore"
 import GoldPassSection from "./components/GoldPassSection/GoldPassSection"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
 import PopularCategories from "./components/PopularCategories/PopularCategories"
+import Testimonials from "./components/Testimonials/Testimonials"
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
         <GoldPassSection/>
         <ExploreMore/>
         <ContactUs/>
-
+        <Testimonials/>
     </>
   )
 }

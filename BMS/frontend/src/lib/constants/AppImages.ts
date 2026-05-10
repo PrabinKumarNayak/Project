@@ -32,6 +32,12 @@ import ExploreBag1 from "@/assets/explore-bag-1.jpg";
 import ExploreFabric1 from "@/assets/explore-fabric-1.jpg";
 import ExploreShirt3 from "@/assets/explore-shirt-3.jpg";
 
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
+import testimonial4 from "@/assets/testimonial-4.jpg";
+import testimonial5 from "@/assets/testimonial-5.jpg";
+
 export const APP_IMAGES = {
   BannerOne,
   SummerBanner,
@@ -62,4 +68,9 @@ export const APP_IMAGES = {
   ExploreBag1,
   ExploreFabric1,
   ExploreShirt3,
+  testimonial1,
+  testimonial2,
+  testimonial3,
+  testimonial4,
+  testimonial5,
 };
