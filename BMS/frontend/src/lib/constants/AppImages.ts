@@ -21,6 +21,17 @@ import GoldPassSaree from "@/assets/gold-pass-saree.jpg";
 import GoldPassKurti from "@/assets/gold-pass-kurti.jpg";
 import GoldPassBag from "@/assets/gold-pass-bag.jpg";
 
+import ExploreShirt1 from "@/assets/explore-shirt-1.jpg";
+import ExploreKurta1 from "@/assets/explore-kurta-1.jpg";
+import ExploreShirt2 from "@/assets/explore-shirt-2.jpg";
+import ExploreDress1 from "@/assets/explore-dress-1.jpg";
+import ExploreKurta2 from "@/assets/explore-kurta-2.jpg";
+import ExploreKids1 from "@/assets/explore-kids-1.jpg";
+import ExploreSaree1 from "@/assets/explore-saree-1.jpg";
+import ExploreBag1 from "@/assets/explore-bag-1.jpg";
+import ExploreFabric1 from "@/assets/explore-fabric-1.jpg";
+import ExploreShirt3 from "@/assets/explore-shirt-3.jpg";
+
 export const APP_IMAGES = {
   BannerOne,
   SummerBanner,
@@ -41,4 +52,14 @@ export const APP_IMAGES = {
   GoldPassSaree,
   GoldPassKurti,
   GoldPassBag,
+  ExploreShirt1,
+  ExploreKurta1,
+  ExploreShirt2,
+  ExploreDress1,
+  ExploreKurta2,
+  ExploreKids1,
+  ExploreSaree1,
+  ExploreBag1,
+  ExploreFabric1,
+  ExploreShirt3,
 };
