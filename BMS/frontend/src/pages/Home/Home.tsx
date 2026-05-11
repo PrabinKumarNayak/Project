@@ -2,6 +2,7 @@ import BudgetFriendly from "./components/BudgetFriendly/BudgetFriendly"
 import CategoryBar from "./components/CollectionBar/CollectionBar"
 import ContactUs from "./components/ContactUs/ContactUs"
 import ExploreMore from "./components/ExploreMore/ExploreMore"
+import Faq from "./components/Faq/Faq"
 import GoldPassSection from "./components/GoldPassSection/GoldPassSection"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
 import PopularCategories from "./components/PopularCategories/PopularCategories"
@@ -18,6 +19,7 @@ const Home = () => {
         <ExploreMore/>
         <ContactUs/>
         <Testimonials/>
+        <Faq/>
     </>
   )
 }
